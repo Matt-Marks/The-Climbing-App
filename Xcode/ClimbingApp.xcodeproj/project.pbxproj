@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C90A56AD2423064A0036C744 /* Discipline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A56AC2423064A0036C744 /* Discipline.swift */; };
+		C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91331C723DB522400F47451 /* UIFont+Extension.swift */; };
+		C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152ADB23D75359002B9D5D /* LineChartView.swift */; };
+		C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E7E94244F7AB20075578A /* LargeHeaderView.swift */; };
+		C929D597242AE13E0076ED74 /* ClimbType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929D596242AE13E0076ED74 /* ClimbType.swift */; };
+		C94BC451242030190046A6E8 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */; };
+		C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */; };
+		C94F1360245600030066020B /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F135F245600030066020B /* SessionViewController.swift */; };
+		C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955FE572453F445005525E3 /* CompactHeaderView.swift */; };
+		C96B2FD0245B1AF3009CC0BD /* AscentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */; };
+		C96B2FD2245B1B22009CC0BD /* AscentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FD1245B1B22009CC0BD /* AscentType.swift */; };
+		C96B2FD4245B1D3E009CC0BD /* ClimbColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */; };
+		C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2823D34C0D0041A767 /* AppDelegate.swift */; };
+		C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */; };
+		C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C974EE3123D34C0D0041A767 /* ClimbingApp.xcdatamodeld */; };
+		C974EE3523D34C0E0041A767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C974EE3423D34C0E0041A767 /* Assets.xcassets */; };
+		C974EE3823D34C0E0041A767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C974EE3623D34C0E0041A767 /* LaunchScreen.storyboard */; };
+		C974EE4323D34C0E0041A767 /* ClimbingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE4223D34C0E0041A767 /* ClimbingAppTests.swift */; };
+		C974EE4E23D34C0E0041A767 /* ClimbingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE4D23D34C0E0041A767 /* ClimbingAppUITests.swift */; };
+		C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */; };
+		C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */; };
+		C97B7923243500A700DE3F40 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7922243500A700DE3F40 /* CardCell.swift */; };
+		C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */; };
+		C98680CA242EA23400BBF5A6 /* ClimbTypeSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */; };
+		C98680CC242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */; };
+		C98680DA24328B2900BBF5A6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680D924328B2900BBF5A6 /* UIView+Extension.swift */; };
+		C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */; };
+		C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9944BC92421AF8E004EAEFE /* UserData.swift */; };
+		C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C1F244CA71100FDEA7D /* ChartCell.swift */; };
+		C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */; };
+		C9BB482E24227C8400761674 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BB482D24227C8400761674 /* UIColor+Extension.swift */; };
+		C9BB483024227D7700761674 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BB482F24227D7700761674 /* CGFloat+Extension.swift */; };
+		C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */; };
+		C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9062459B01F00A9795F /* SessionModel.swift */; };
+		C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9082459B11400A9795F /* ClimbModel.swift */; };
+		C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7C9D523D36AF3004954D4 /* BarChartView.swift */; };
+		C9C909282454BA82002E9372 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C909272454BA82002E9372 /* BasicButton.swift */; };
+		C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81CD242810D7003447AB /* StopwatchLabel.swift */; };
+		C9CB81D224281EAE003447AB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81D124281EAE003447AB /* Location.swift */; };
+		C9CB81DC24284A03003447AB /* GradeSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81DB24284A03003447AB /* GradeSystem.swift */; };
+		C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C974EE3F23D34C0E0041A767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C974EE1D23D34C0D0041A767 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C974EE2423D34C0D0041A767;
+			remoteInfo = ClimbingApp;
+		};
+		C974EE4A23D34C0E0041A767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C974EE1D23D34C0D0041A767 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C974EE2423D34C0D0041A767;
+			remoteInfo = ClimbingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C90A56AC2423064A0036C744 /* Discipline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discipline.swift; sourceTree = "<group>"; };
+		C91331C723DB522400F47451 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		C9152ADB23D75359002B9D5D /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		C91E7E94244F7AB20075578A /* LargeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeHeaderView.swift; sourceTree = "<group>"; };
+		C929D596242AE13E0076ED74 /* ClimbType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbType.swift; sourceTree = "<group>"; };
+		C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveButton.swift; sourceTree = "<group>"; };
+		C94F135F245600030066020B /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		C955FE572453F445005525E3 /* CompactHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactHeaderView.swift; sourceTree = "<group>"; };
+		C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscentModel.swift; sourceTree = "<group>"; };
+		C96B2FD1245B1B22009CC0BD /* AscentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscentType.swift; sourceTree = "<group>"; };
+		C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbColor.swift; sourceTree = "<group>"; };
+		C974EE2523D34C0D0041A767 /* Climb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Climb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C974EE2823D34C0D0041A767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C974EE3223D34C0D0041A767 /* ClimbingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClimbingApp.xcdatamodel; sourceTree = "<group>"; };
+		C974EE3423D34C0E0041A767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C974EE3723D34C0E0041A767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C974EE3923D34C0E0041A767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C974EE3E23D34C0E0041A767 /* ClimbingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C974EE4223D34C0E0041A767 /* ClimbingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingAppTests.swift; sourceTree = "<group>"; };
+		C974EE4423D34C0E0041A767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C974EE4923D34C0E0041A767 /* ClimbingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C974EE4D23D34C0E0041A767 /* ClimbingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingAppUITests.swift; sourceTree = "<group>"; };
+		C974EE4F23D34C0E0041A767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonCell.swift; sourceTree = "<group>"; };
+		C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveButtonCell.swift; sourceTree = "<group>"; };
+		C97B7922243500A700DE3F40 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectorController.swift; sourceTree = "<group>"; };
+		C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbTypeSelectorController.swift; sourceTree = "<group>"; };
+		C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSystemSelectorController.swift; sourceTree = "<group>"; };
+		C98680D924328B2900BBF5A6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupSessionViewController.swift; sourceTree = "<group>"; };
+		C9944BC92421AF8E004EAEFE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C9B20C1F244CA71100FDEA7D /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
+		C9BB482D24227C8400761674 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C9BB482F24227D7700761674 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		C9C4C9062459B01F00A9795F /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		C9C4C9082459B11400A9795F /* ClimbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbModel.swift; sourceTree = "<group>"; };
+		C9C7C9D523D36AF3004954D4 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		C9C909272454BA82002E9372 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		C9CB81CD242810D7003447AB /* StopwatchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchLabel.swift; sourceTree = "<group>"; };
+		C9CB81D124281EAE003447AB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C9CB81DB24284A03003447AB /* GradeSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSystem.swift; sourceTree = "<group>"; };
+		C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C974EE2223D34C0D0041A767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE3B23D34C0E0041A767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE4623D34C0E0041A767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C94BC43F24202D410046A6E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C94BC44824202E1C0046A6E8 /* Supplementary Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9C7C9D523D36AF3004954D4 /* BarChartView.swift */,
+				C9152ADB23D75359002B9D5D /* LineChartView.swift */,
+			);
+			path = "Supplementary Views";
+			sourceTree = "<group>";
+		};
+		C94DBDD2247188C600F91F22 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				C996CD072471AB4500110DE9 /* Labels */,
+				C94DBDD4247188DF00F91F22 /* Collection View Components */,
+				C94DBDD3247188D400F91F22 /* Buttons */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		C94DBDD3247188D400F91F22 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C9C909272454BA82002E9372 /* BasicButton.swift */,
+				C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C94DBDD4247188DF00F91F22 /* Collection View Components */ = {
+			isa = PBXGroup;
+			children = (
+				C91E7E94244F7AB20075578A /* LargeHeaderView.swift */,
+				C955FE572453F445005525E3 /* CompactHeaderView.swift */,
+				C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */,
+				C97B7922243500A700DE3F40 /* CardCell.swift */,
+				C9B20C1F244CA71100FDEA7D /* ChartCell.swift */,
+				C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */,
+				C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */,
+				C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */,
+			);
+			path = "Collection View Components";
+			sourceTree = "<group>";
+		};
+		C94DBDD5247188F800F91F22 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */,
+				C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */,
+				C94F135F245600030066020B /* SessionViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C95030F723D7C48B00EE7998 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C91331C723DB522400F47451 /* UIFont+Extension.swift */,
+				C9BB482D24227C8400761674 /* UIColor+Extension.swift */,
+				C9BB482F24227D7700761674 /* CGFloat+Extension.swift */,
+				C98680D924328B2900BBF5A6 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C96A25DC2471A1FB003A5EB4 /* Not Used Yet */ = {
+			isa = PBXGroup;
+			children = (
+				C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */,
+				C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */,
+				C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */,
+			);
+			path = "Not Used Yet";
+			sourceTree = "<group>";
+		};
+		C974EE1C23D34C0D0041A767 = {
+			isa = PBXGroup;
+			children = (
+				C974EE2723D34C0D0041A767 /* ClimbingApp */,
+				C974EE4123D34C0E0041A767 /* ClimbingAppTests */,
+				C974EE4C23D34C0E0041A767 /* ClimbingAppUITests */,
+				C974EE2623D34C0D0041A767 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C974EE2623D34C0D0041A767 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C974EE2523D34C0D0041A767 /* Climb.app */,
+				C974EE3E23D34C0E0041A767 /* ClimbingAppTests.xctest */,
+				C974EE4923D34C0E0041A767 /* ClimbingAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C974EE2723D34C0D0041A767 /* ClimbingApp */ = {
+			isa = PBXGroup;
+			children = (
+				C94DBDD2247188C600F91F22 /* Reusable Components */,
+				C9C4C9052459B00B00A9795F /* Models */,
+				C94DBDD5247188F800F91F22 /* Screens */,
+				C9944BC62421A9AA004EAEFE /* Enumerations */,
+				C95030F723D7C48B00EE7998 /* Extensions */,
+				C94BC44824202E1C0046A6E8 /* Supplementary Views */,
+				C94BC43F24202D410046A6E8 /* Protocols */,
+				C96A25DC2471A1FB003A5EB4 /* Not Used Yet */,
+				C974EE2823D34C0D0041A767 /* AppDelegate.swift */,
+				C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */,
+				C974EE3423D34C0E0041A767 /* Assets.xcassets */,
+				C974EE3623D34C0E0041A767 /* LaunchScreen.storyboard */,
+				C974EE3923D34C0E0041A767 /* Info.plist */,
+				C974EE3123D34C0D0041A767 /* ClimbingApp.xcdatamodeld */,
+			);
+			path = ClimbingApp;
+			sourceTree = "<group>";
+		};
+		C974EE4123D34C0E0041A767 /* ClimbingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C974EE4223D34C0E0041A767 /* ClimbingAppTests.swift */,
+				C974EE4423D34C0E0041A767 /* Info.plist */,
+			);
+			path = ClimbingAppTests;
+			sourceTree = "<group>";
+		};
+		C974EE4C23D34C0E0041A767 /* ClimbingAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C974EE4D23D34C0E0041A767 /* ClimbingAppUITests.swift */,
+				C974EE4F23D34C0E0041A767 /* Info.plist */,
+			);
+			path = ClimbingAppUITests;
+			sourceTree = "<group>";
+		};
+		C9944BC62421A9AA004EAEFE /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				C90A56AC2423064A0036C744 /* Discipline.swift */,
+				C9CB81D124281EAE003447AB /* Location.swift */,
+				C929D596242AE13E0076ED74 /* ClimbType.swift */,
+				C9CB81DB24284A03003447AB /* GradeSystem.swift */,
+				C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */,
+				C96B2FD1245B1B22009CC0BD /* AscentType.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		C996CD072471AB4500110DE9 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB81CD242810D7003447AB /* StopwatchLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		C9C4C9052459B00B00A9795F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9C4C9062459B01F00A9795F /* SessionModel.swift */,
+				C9C4C9082459B11400A9795F /* ClimbModel.swift */,
+				C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */,
+				C9944BC92421AF8E004EAEFE /* UserData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C974EE2423D34C0D0041A767 /* ClimbingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C974EE5223D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingApp" */;
+			buildPhases = (
+				C974EE2123D34C0D0041A767 /* Sources */,
+				C974EE2223D34C0D0041A767 /* Frameworks */,
+				C974EE2323D34C0D0041A767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClimbingApp;
+			packageProductDependencies = (
+			);
+			productName = ClimbingApp;
+			productReference = C974EE2523D34C0D0041A767 /* Climb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C974EE3D23D34C0E0041A767 /* ClimbingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C974EE5523D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingAppTests" */;
+			buildPhases = (
+				C974EE3A23D34C0E0041A767 /* Sources */,
+				C974EE3B23D34C0E0041A767 /* Frameworks */,
+				C974EE3C23D34C0E0041A767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C974EE4023D34C0E0041A767 /* PBXTargetDependency */,
+			);
+			name = ClimbingAppTests;
+			productName = ClimbingAppTests;
+			productReference = C974EE3E23D34C0E0041A767 /* ClimbingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C974EE4823D34C0E0041A767 /* ClimbingAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C974EE5823D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingAppUITests" */;
+			buildPhases = (
+				C974EE4523D34C0E0041A767 /* Sources */,
+				C974EE4623D34C0E0041A767 /* Frameworks */,
+				C974EE4723D34C0E0041A767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C974EE4B23D34C0E0041A767 /* PBXTargetDependency */,
+			);
+			name = ClimbingAppUITests;
+			productName = ClimbingAppUITests;
+			productReference = C974EE4923D34C0E0041A767 /* ClimbingAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C974EE1D23D34C0D0041A767 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Matt Marks";
+				TargetAttributes = {
+					C974EE2423D34C0D0041A767 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					C974EE3D23D34C0E0041A767 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = C974EE2423D34C0D0041A767;
+					};
+					C974EE4823D34C0E0041A767 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = C974EE2423D34C0D0041A767;
+					};
+				};
+			};
+			buildConfigurationList = C974EE2023D34C0D0041A767 /* Build configuration list for PBXProject "ClimbingApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C974EE1C23D34C0D0041A767;
+			packageReferences = (
+				C9BB48362422B8A100761674 /* XCRemoteSwiftPackageReference "CareKit" */,
+			);
+			productRefGroup = C974EE2623D34C0D0041A767 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C974EE2423D34C0D0041A767 /* ClimbingApp */,
+				C974EE3D23D34C0E0041A767 /* ClimbingAppTests */,
+				C974EE4823D34C0E0041A767 /* ClimbingAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C974EE2323D34C0D0041A767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C974EE3823D34C0E0041A767 /* LaunchScreen.storyboard in Resources */,
+				C974EE3523D34C0E0041A767 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE3C23D34C0E0041A767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE4723D34C0E0041A767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C974EE2123D34C0D0041A767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */,
+				C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */,
+				C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */,
+				C9CB81DC24284A03003447AB /* GradeSystem.swift in Sources */,
+				C9C909282454BA82002E9372 /* BasicButton.swift in Sources */,
+				C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */,
+				C9BB482E24227C8400761674 /* UIColor+Extension.swift in Sources */,
+				C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */,
+				C9CB81D224281EAE003447AB /* Location.swift in Sources */,
+				C98680CC242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift in Sources */,
+				C94BC451242030190046A6E8 /* ReuseIdentifiable.swift in Sources */,
+				C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */,
+				C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */,
+				C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */,
+				C98680DA24328B2900BBF5A6 /* UIView+Extension.swift in Sources */,
+				C94F1360245600030066020B /* SessionViewController.swift in Sources */,
+				C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */,
+				C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */,
+				C929D597242AE13E0076ED74 /* ClimbType.swift in Sources */,
+				C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */,
+				C97B7923243500A700DE3F40 /* CardCell.swift in Sources */,
+				C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */,
+				C96B2FD2245B1B22009CC0BD /* AscentType.swift in Sources */,
+				C96B2FD0245B1AF3009CC0BD /* AscentModel.swift in Sources */,
+				C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */,
+				C90A56AD2423064A0036C744 /* Discipline.swift in Sources */,
+				C98680CA242EA23400BBF5A6 /* ClimbTypeSelectorController.swift in Sources */,
+				C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */,
+				C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */,
+				C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */,
+				C96B2FD4245B1D3E009CC0BD /* ClimbColor.swift in Sources */,
+				C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */,
+				C9BB483024227D7700761674 /* CGFloat+Extension.swift in Sources */,
+				C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */,
+				C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */,
+				C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */,
+				C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE3A23D34C0E0041A767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C974EE4323D34C0E0041A767 /* ClimbingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C974EE4523D34C0E0041A767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C974EE4E23D34C0E0041A767 /* ClimbingAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C974EE4023D34C0E0041A767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C974EE2423D34C0D0041A767 /* ClimbingApp */;
+			targetProxy = C974EE3F23D34C0E0041A767 /* PBXContainerItemProxy */;
+		};
+		C974EE4B23D34C0E0041A767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C974EE2423D34C0D0041A767 /* ClimbingApp */;
+			targetProxy = C974EE4A23D34C0E0041A767 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C974EE3623D34C0E0041A767 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C974EE3723D34C0E0041A767 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C974EE5023D34C0E0041A767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C974EE5123D34C0E0041A767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C974EE5323D34C0E0041A767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingApp;
+				PRODUCT_NAME = Climb;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C974EE5423D34C0E0041A767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingApp;
+				PRODUCT_NAME = Climb;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C974EE5623D34C0E0041A767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbingApp.app/ClimbingApp";
+			};
+			name = Debug;
+		};
+		C974EE5723D34C0E0041A767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClimbingApp.app/ClimbingApp";
+			};
+			name = Release;
+		};
+		C974EE5923D34C0E0041A767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClimbingApp;
+			};
+			name = Debug;
+		};
+		C974EE5A23D34C0E0041A767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G469XPXR7F;
+				INFOPLIST_FILE = ClimbingAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nanotube.ClimbingAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClimbingApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C974EE2023D34C0D0041A767 /* Build configuration list for PBXProject "ClimbingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C974EE5023D34C0E0041A767 /* Debug */,
+				C974EE5123D34C0E0041A767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C974EE5223D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C974EE5323D34C0E0041A767 /* Debug */,
+				C974EE5423D34C0E0041A767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C974EE5523D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C974EE5623D34C0E0041A767 /* Debug */,
+				C974EE5723D34C0E0041A767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C974EE5823D34C0E0041A767 /* Build configuration list for PBXNativeTarget "ClimbingAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C974EE5923D34C0E0041A767 /* Debug */,
+				C974EE5A23D34C0E0041A767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9BB48362422B8A100761674 /* XCRemoteSwiftPackageReference "CareKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carekit-apple/CareKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCVersionGroup section */
+		C974EE3123D34C0D0041A767 /* ClimbingApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C974EE3223D34C0D0041A767 /* ClimbingApp.xcdatamodel */,
+			);
+			currentVersion = C974EE3223D34C0D0041A767 /* ClimbingApp.xcdatamodel */;
+			path = ClimbingApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C974EE1D23D34C0D0041A767 /* Project object */;
+}
