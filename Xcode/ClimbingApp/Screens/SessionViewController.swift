@@ -48,8 +48,8 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     // MARK: Configuration
     private func configureHeaderView() {
         headerView = LargeHeaderView()
-        headerView.pretitle = session.getLocation().name
-        headerView.title = session.getDiscipline().name
+        headerView.pretitle = "oasihdiuoash"
+        headerView.title = "saoiuhduois"
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
@@ -73,7 +73,7 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.register(SectionHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier)
         
         // Used for finish and cancel buttons.
-        collectionView.register(SessionFooerReustableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SessionFooerReustableView.reuseIdentifier)
+        collectionView.register(SessionFooterReustableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SessionFooterReustableView.reuseIdentifier)
         
         // We dont use multiple selection. But, since content touches are not
         // delayed we need multiple selection to be enabled so cells don't
@@ -194,7 +194,7 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case Constants.sectionIndexClimbs: return max(session.numAscents(), 1)
+        case Constants.sectionIndexClimbs: return  1 //max(session.numAscents(), 1)
         case Constants.sectionIndexSummary: return 9
         default: fatalError()
         }
@@ -244,8 +244,8 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
         if kind == UICollectionView.elementKindSectionFooter {
             let sectionFooter = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: SessionFooerReustableView.reuseIdentifier,
-                for: indexPath) as! SessionFooerReustableView
+                withReuseIdentifier: SessionFooterReustableView.reuseIdentifier,
+                for: indexPath) as! SessionFooterReustableView
             sectionFooter.delegate = self
             return sectionFooter
         }
@@ -254,11 +254,11 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     // MARK: SessionFooerReustableViewDelegate
-    fileprivate func finishButtonPressed(_ sessionFooter: SessionFooerReustableView) {
+    fileprivate func finishButtonPressed(_ sessionFooter: SessionFooterReustableView) {
         
     }
     
-    fileprivate func cancelButtonPressed(_ sessionFooter: SessionFooerReustableView) {
+    fileprivate func cancelButtonPressed(_ sessionFooter: SessionFooterReustableView) {
         
     }
 }
@@ -324,14 +324,14 @@ fileprivate class AttemptCell: UICollectionViewCell, ReuseIdentifiable {
 // MARK: - SessionFooerReustableViewDelegate
 // ********************************************************************** //
 fileprivate protocol SessionFooerReustableViewDelegate {
-    func finishButtonPressed(_ sessionFooter: SessionFooerReustableView)
-    func cancelButtonPressed(_ sessionFooter: SessionFooerReustableView)
+    func finishButtonPressed(_ sessionFooter: SessionFooterReustableView)
+    func cancelButtonPressed(_ sessionFooter: SessionFooterReustableView)
 }
 
 // ********************************************************************** //
 // MARK: - SessionFooerReustableView
 // ********************************************************************** //
-fileprivate class SessionFooerReustableView: UICollectionReusableView, ReuseIdentifiable {
+fileprivate class SessionFooterReustableView: UICollectionReusableView, ReuseIdentifiable {
     
     // MARK: ReuseIdentifiable Protocol
     static let reuseIdentifier: String = "SetupSessionFooterReuseableView"

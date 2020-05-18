@@ -163,7 +163,7 @@ class GradeSystemSelectorController: UIViewController, UICollectionViewDelegate,
         
         cell.descriptiveButton.icon = gradeSystem.icon
         cell.descriptiveButton.title = gradeSystem.name
-        cell.descriptiveButton.subtitle = gradeSystem.examples
+        cell.descriptiveButton.subtitle = gradeSystem.values[0]
         cell.descriptiveButton.unselectedIconTintColor = .systemGray
         
         return cell

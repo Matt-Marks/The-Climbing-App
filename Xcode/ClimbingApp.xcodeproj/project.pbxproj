@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C90A56AD2423064A0036C744 /* Discipline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A56AC2423064A0036C744 /* Discipline.swift */; };
 		C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91331C723DB522400F47451 /* UIFont+Extension.swift */; };
 		C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152ADB23D75359002B9D5D /* LineChartView.swift */; };
 		C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E7E94244F7AB20075578A /* LargeHeaderView.swift */; };
-		C929D597242AE13E0076ED74 /* ClimbType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C929D596242AE13E0076ED74 /* ClimbType.swift */; };
-		C94BC451242030190046A6E8 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */; };
 		C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */; };
 		C94F1360245600030066020B /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F135F245600030066020B /* SessionViewController.swift */; };
+		C95531A3247337C70066DAE1 /* TCAProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A2247337C70066DAE1 /* TCAProtocols.swift */; };
+		C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A4247337DC0066DAE1 /* TCATypes.swift */; };
+		C95531A724733FD40066DAE1 /* TCAEnumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A624733FD40066DAE1 /* TCAEnumerations.swift */; };
+		C95531AA247340A00066DAE1 /* TCAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A9247340A00066DAE1 /* TCAConstants.swift */; };
 		C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955FE572453F445005525E3 /* CompactHeaderView.swift */; };
-		C96B2FD0245B1AF3009CC0BD /* AscentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */; };
-		C96B2FD2245B1B22009CC0BD /* AscentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FD1245B1B22009CC0BD /* AscentType.swift */; };
-		C96B2FD4245B1D3E009CC0BD /* ClimbColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */; };
+		C964DBC2247219A5004DB8B0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC1247219A5004DB8B0 /* LocationModel.swift */; };
+		C964DBC62472D470004DB8B0 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC52472D470004DB8B0 /* LocationCell.swift */; };
+		C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */; };
+		C96B2FD0245B1AF3009CC0BD /* AttemptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */; };
 		C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2823D34C0D0041A767 /* AppDelegate.swift */; };
 		C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */; };
 		C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C974EE3123D34C0D0041A767 /* ClimbingApp.xcdatamodeld */; };
@@ -37,16 +39,12 @@
 		C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9944BC92421AF8E004EAEFE /* UserData.swift */; };
 		C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C1F244CA71100FDEA7D /* ChartCell.swift */; };
 		C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */; };
-		C9BB482E24227C8400761674 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BB482D24227C8400761674 /* UIColor+Extension.swift */; };
-		C9BB483024227D7700761674 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BB482F24227D7700761674 /* CGFloat+Extension.swift */; };
 		C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */; };
 		C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9062459B01F00A9795F /* SessionModel.swift */; };
 		C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9082459B11400A9795F /* ClimbModel.swift */; };
 		C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7C9D523D36AF3004954D4 /* BarChartView.swift */; };
 		C9C909282454BA82002E9372 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C909272454BA82002E9372 /* BasicButton.swift */; };
 		C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81CD242810D7003447AB /* StopwatchLabel.swift */; };
-		C9CB81D224281EAE003447AB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81D124281EAE003447AB /* Location.swift */; };
-		C9CB81DC24284A03003447AB /* GradeSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81DB24284A03003447AB /* GradeSystem.swift */; };
 		C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,18 +66,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C90A56AC2423064A0036C744 /* Discipline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discipline.swift; sourceTree = "<group>"; };
 		C91331C723DB522400F47451 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		C9152ADB23D75359002B9D5D /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		C91E7E94244F7AB20075578A /* LargeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeHeaderView.swift; sourceTree = "<group>"; };
-		C929D596242AE13E0076ED74 /* ClimbType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbType.swift; sourceTree = "<group>"; };
-		C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveButton.swift; sourceTree = "<group>"; };
 		C94F135F245600030066020B /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		C95531A2247337C70066DAE1 /* TCAProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAProtocols.swift; sourceTree = "<group>"; };
+		C95531A4247337DC0066DAE1 /* TCATypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATypes.swift; sourceTree = "<group>"; };
+		C95531A624733FD40066DAE1 /* TCAEnumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAEnumerations.swift; sourceTree = "<group>"; };
+		C95531A9247340A00066DAE1 /* TCAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAConstants.swift; sourceTree = "<group>"; };
 		C955FE572453F445005525E3 /* CompactHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactHeaderView.swift; sourceTree = "<group>"; };
-		C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscentModel.swift; sourceTree = "<group>"; };
-		C96B2FD1245B1B22009CC0BD /* AscentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AscentType.swift; sourceTree = "<group>"; };
-		C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbColor.swift; sourceTree = "<group>"; };
+		C964DBC1247219A5004DB8B0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		C964DBC52472D470004DB8B0 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iconlabel.swift; sourceTree = "<group>"; };
+		C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptModel.swift; sourceTree = "<group>"; };
 		C974EE2523D34C0D0041A767 /* Climb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Climb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C974EE2823D34C0D0041A767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,16 +104,12 @@
 		C9944BC92421AF8E004EAEFE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		C9B20C1F244CA71100FDEA7D /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
-		C9BB482D24227C8400761674 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		C9BB482F24227D7700761674 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
 		C9C4C9062459B01F00A9795F /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		C9C4C9082459B11400A9795F /* ClimbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbModel.swift; sourceTree = "<group>"; };
 		C9C7C9D523D36AF3004954D4 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		C9C909272454BA82002E9372 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		C9CB81CD242810D7003447AB /* StopwatchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchLabel.swift; sourceTree = "<group>"; };
-		C9CB81D124281EAE003447AB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		C9CB81DB24284A03003447AB /* GradeSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSystem.swift; sourceTree = "<group>"; };
 		C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,14 +138,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C94BC43F24202D410046A6E8 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				C94BC450242030190046A6E8 /* ReuseIdentifiable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		C94BC44824202E1C0046A6E8 /* Supplementary Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +177,7 @@
 				C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */,
 				C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */,
 				C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */,
+				C964DBC52472D470004DB8B0 /* LocationCell.swift */,
 			);
 			path = "Collection View Components";
 			sourceTree = "<group>";
@@ -207,11 +196,20 @@
 			isa = PBXGroup;
 			children = (
 				C91331C723DB522400F47451 /* UIFont+Extension.swift */,
-				C9BB482D24227C8400761674 /* UIColor+Extension.swift */,
-				C9BB482F24227D7700761674 /* CGFloat+Extension.swift */,
 				C98680D924328B2900BBF5A6 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C95531A1247335CB0066DAE1 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				C95531A2247337C70066DAE1 /* TCAProtocols.swift */,
+				C95531A4247337DC0066DAE1 /* TCATypes.swift */,
+				C95531A9247340A00066DAE1 /* TCAConstants.swift */,
+				C95531A624733FD40066DAE1 /* TCAEnumerations.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 		C96A25DC2471A1FB003A5EB4 /* Not Used Yet */ = {
@@ -247,13 +245,12 @@
 		C974EE2723D34C0D0041A767 /* ClimbingApp */ = {
 			isa = PBXGroup;
 			children = (
-				C94DBDD2247188C600F91F22 /* Reusable Components */,
-				C9C4C9052459B00B00A9795F /* Models */,
-				C94DBDD5247188F800F91F22 /* Screens */,
-				C9944BC62421A9AA004EAEFE /* Enumerations */,
+				C95531A1247335CB0066DAE1 /* Global */,
 				C95030F723D7C48B00EE7998 /* Extensions */,
+				C94DBDD2247188C600F91F22 /* Reusable Components */,
+				C9C4C9052459B00B00A9795F /* Data & Models */,
+				C94DBDD5247188F800F91F22 /* Screens */,
 				C94BC44824202E1C0046A6E8 /* Supplementary Views */,
-				C94BC43F24202D410046A6E8 /* Protocols */,
 				C96A25DC2471A1FB003A5EB4 /* Not Used Yet */,
 				C974EE2823D34C0D0041A767 /* AppDelegate.swift */,
 				C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */,
@@ -283,36 +280,25 @@
 			path = ClimbingAppUITests;
 			sourceTree = "<group>";
 		};
-		C9944BC62421A9AA004EAEFE /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				C90A56AC2423064A0036C744 /* Discipline.swift */,
-				C9CB81D124281EAE003447AB /* Location.swift */,
-				C929D596242AE13E0076ED74 /* ClimbType.swift */,
-				C9CB81DB24284A03003447AB /* GradeSystem.swift */,
-				C96B2FD3245B1D3E009CC0BD /* ClimbColor.swift */,
-				C96B2FD1245B1B22009CC0BD /* AscentType.swift */,
-			);
-			path = Enumerations;
-			sourceTree = "<group>";
-		};
 		C996CD072471AB4500110DE9 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
 				C9CB81CD242810D7003447AB /* StopwatchLabel.swift */,
+				C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		C9C4C9052459B00B00A9795F /* Models */ = {
+		C9C4C9052459B00B00A9795F /* Data & Models */ = {
 			isa = PBXGroup;
 			children = (
+				C9944BC92421AF8E004EAEFE /* UserData.swift */,
 				C9C4C9062459B01F00A9795F /* SessionModel.swift */,
 				C9C4C9082459B11400A9795F /* ClimbModel.swift */,
-				C96B2FCF245B1AF3009CC0BD /* AscentModel.swift */,
-				C9944BC92421AF8E004EAEFE /* UserData.swift */,
+				C964DBC1247219A5004DB8B0 /* LocationModel.swift */,
+				C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */,
 			);
-			path = Models;
+			path = "Data & Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,14 +439,15 @@
 				C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */,
 				C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */,
 				C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */,
-				C9CB81DC24284A03003447AB /* GradeSystem.swift in Sources */,
+				C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */,
 				C9C909282454BA82002E9372 /* BasicButton.swift in Sources */,
 				C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */,
-				C9BB482E24227C8400761674 /* UIColor+Extension.swift in Sources */,
+				C964DBC62472D470004DB8B0 /* LocationCell.swift in Sources */,
 				C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */,
-				C9CB81D224281EAE003447AB /* Location.swift in Sources */,
+				C95531A3247337C70066DAE1 /* TCAProtocols.swift in Sources */,
+				C95531A724733FD40066DAE1 /* TCAEnumerations.swift in Sources */,
 				C98680CC242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift in Sources */,
-				C94BC451242030190046A6E8 /* ReuseIdentifiable.swift in Sources */,
+				C964DBC2247219A5004DB8B0 /* LocationModel.swift in Sources */,
 				C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */,
 				C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */,
 				C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */,
@@ -468,22 +455,19 @@
 				C94F1360245600030066020B /* SessionViewController.swift in Sources */,
 				C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */,
 				C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */,
-				C929D597242AE13E0076ED74 /* ClimbType.swift in Sources */,
 				C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */,
 				C97B7923243500A700DE3F40 /* CardCell.swift in Sources */,
+				C95531AA247340A00066DAE1 /* TCAConstants.swift in Sources */,
 				C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */,
-				C96B2FD2245B1B22009CC0BD /* AscentType.swift in Sources */,
-				C96B2FD0245B1AF3009CC0BD /* AscentModel.swift in Sources */,
+				C96B2FD0245B1AF3009CC0BD /* AttemptModel.swift in Sources */,
 				C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */,
-				C90A56AD2423064A0036C744 /* Discipline.swift in Sources */,
 				C98680CA242EA23400BBF5A6 /* ClimbTypeSelectorController.swift in Sources */,
 				C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */,
 				C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */,
 				C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */,
-				C96B2FD4245B1D3E009CC0BD /* ClimbColor.swift in Sources */,
 				C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */,
-				C9BB483024227D7700761674 /* CGFloat+Extension.swift in Sources */,
 				C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */,
+				C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */,
 				C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */,
 				C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */,
 				C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */,

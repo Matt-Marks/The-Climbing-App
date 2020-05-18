@@ -12,7 +12,7 @@ import UIKit
 // MARK: - SetupSessionViewControllerDelegate
 // ********************************************************************** //
 protocol SetupSessionViewControllerDelegate {
-    func setupSessionViewController(_ SetupSessionViewController: SetupSessionViewController, didSetupSessionWithDiscipline discipline: Discipline, andLocation location: Location)
+    func setupSessionViewController(_ SetupSessionViewController: SetupSessionViewController, didSetupSessionWithDiscipline discipline: Discipline)
 }
 
 // ********************************************************************** //
@@ -27,18 +27,16 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     
     struct Constants {
         static let initialSelectedDiscipline: Discipline = .bouldering
-        static let initialSelectedLocation: Location     = .indoors
         static let pretitle: String            = "New Session"
         static let title: String               = "Configuration"
         static let startButtonTitle: String    = "Start Session"
-        static let sectionIndexLocation: Int   = 0
-        static let sectionIndexDiscipline: Int = 1
-        static let numberOfSections: Int       = 2
+        static let sectionIndexLocation: Int   = 999
+        static let sectionIndexDiscipline: Int = 0
+        static let numberOfSections: Int       = 1
     }
     
     // User selections
     private var selectedDiscipline: Discipline = Constants.initialSelectedDiscipline
-    private var selectedLocation: Location = Constants.initialSelectedLocation
     
     // The top nav bar.
     private var headerView: CompactHeaderView!
@@ -61,7 +59,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
         
         // Initial Selection
         selectItem(at: IndexPath(row: selectedDiscipline.rawValue, section: Constants.sectionIndexDiscipline))
-        selectItem(at: IndexPath(row: selectedLocation.rawValue, section: Constants.sectionIndexLocation))
+
     }
 
     
@@ -169,8 +167,6 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
             switch sectionIndex {
             case Constants.sectionIndexDiscipline:
                 section = self.createDisciplineLayoutSection(for: layoutEnviroment)
-            case Constants.sectionIndexLocation:
-                section = self.createLocationLayoutSection(for: layoutEnviroment)
             default: fatalError()
             }
             
@@ -224,25 +220,25 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     ///
     /// - Returns:
     ///     - The NSCollectionLayoutSection used for the location section.
-    private func createLocationLayoutSection(for layoutEnv: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        
-        // Section
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(45))
-        let item = NSCollectionLayoutItem(layoutSize: size)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: Location.allCases.count)
-        group.interItemSpacing = .fixed(.interItemSpacing)
-        let section = NSCollectionLayoutSection(group: group)
-        
-        // Heaer with 'Location' text.
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        section.boundarySupplementaryItems = [headerItem]
-        section.interGroupSpacing = .interGroupSpacing
-        section.contentInsets = .init( top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .zero, trailing: .screenEdgeSpacing)
-        
-        return section
-    }
+//    private func createLocationLayoutSection(for layoutEnv: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
+//
+//        // Section
+//        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(45))
+//        let item = NSCollectionLayoutItem(layoutSize: size)
+//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: Location.allCases.count)
+//        group.interItemSpacing = .fixed(.interItemSpacing)
+//        let section = NSCollectionLayoutSection(group: group)
+//
+//        // Heaer with 'Location' text.
+//        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
+//        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+//
+//        section.boundarySupplementaryItems = [headerItem]
+//        section.interGroupSpacing = .interGroupSpacing
+//        section.contentInsets = .init( top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .zero, trailing: .screenEdgeSpacing)
+//
+//        return section
+//    }
 
 
     // MARK: UICollectionViewDelegate & UICollectionViewDataSource
@@ -258,7 +254,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
         }
         
         if indexPath.section == Constants.sectionIndexLocation {
-            selectedLocation = Location(rawValue: indexPath.row)!
+
         }
         
         selectItem(at: indexPath)
@@ -272,7 +268,6 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case Constants.sectionIndexDiscipline: return Discipline.allCases.count
-        case Constants.sectionIndexLocation:   return Location.allCases.count
         default: fatalError()
         }
     }
@@ -291,10 +286,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
             return cell
         case Constants.sectionIndexLocation:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicButtonCell.reuseIdentifier, for: indexPath) as! BasicButtonCell
-            
-            let location = Location.allCases[indexPath.row]
-            cell.basicButton.leftIcon = location.icon
-            cell.basicButton.title = location.name
+
             
             
             return cell
@@ -374,7 +366,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     ///     - setupSessionFooter: The footer view with the start button.
     fileprivate func startButtonPressed(_ setupSessionFooter: SetupSessionFooterReuseableView) {
         dismiss(animated: true) {
-            self.delegate?.setupSessionViewController(self, didSetupSessionWithDiscipline: self.selectedDiscipline, andLocation: self.selectedLocation)
+
         }
         
     }

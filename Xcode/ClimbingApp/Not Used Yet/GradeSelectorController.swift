@@ -152,7 +152,7 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return gradeSystem.allValues().count
+        return gradeSystem.values.count
         
     }
     
@@ -163,7 +163,7 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
             withReuseIdentifier: BasicButtonCell.reuseIdentifier,
             for: indexPath) as! BasicButtonCell
         
-        cell.basicButton.title = gradeSystem.allValues()[indexPath.row]
+        cell.basicButton.title = gradeSystem.values[indexPath.row]
         return cell
         
         

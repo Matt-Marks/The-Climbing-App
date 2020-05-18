@@ -12,14 +12,14 @@ import UIKit
 // MARK: - ClimbTypeSelectorControllerDataSource
 // ********************************************************************** //
 protocol ClimbTypeSelectorControllerDataSource {
-    func initialSelectedClimbType(in climbTypeSelector: ClimbTypeSelectorController) -> ClimbType
+    func initialSelectedClimbType(in climbTypeSelector: ClimbTypeSelectorController) -> AttemptType
 }
 
 // ********************************************************************** //
 // MARK: - ClimbTypeSelectorControllerDelegate
 // ********************************************************************** //
 protocol ClimbTypeSelectorControllerDelegate {
-    func climbTypeSelector(_ climbTypeSelector: ClimbTypeSelectorController, didSelectClimbType climbType: ClimbType)
+    func climbTypeSelector(_ climbTypeSelector: ClimbTypeSelectorController, didSelectClimbType climbType: AttemptType)
 }
 
 
@@ -120,7 +120,7 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
     // MARK: Collection View Delegate & Datasource
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ClimbType.allCases.count
+        return AttemptType.allCases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -130,7 +130,7 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
             for: indexPath) as! DescriptiveButtonCell
         
         
-        let climbType = ClimbType.allCases[indexPath.row]
+        let climbType = AttemptType.allCases[indexPath.row]
         cell.descriptiveButton.icon = climbType.icon
         cell.descriptiveButton.title = climbType.name
         cell.descriptiveButton.subtitle = climbType.description
@@ -146,7 +146,7 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         
-        delegate?.climbTypeSelector(self, didSelectClimbType: ClimbType(rawValue: indexPath.row)!)
+        delegate?.climbTypeSelector(self, didSelectClimbType: AttemptType(rawValue: indexPath.row)!)
         
         selectItem(at: indexPath)
         
@@ -162,7 +162,7 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
     // MARK: Cell Selection
     private func highlightInitialSelection() {
         if let initialSelection = dataSource?.initialSelectedClimbType(in: self) {
-            let row = ClimbType.allCases.firstIndex(of: initialSelection)!
+            let row = AttemptType.allCases.firstIndex(of: initialSelection)!
             selectItem(at: IndexPath(row: row, section: 0))
         }
     }

@@ -17,15 +17,17 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     private var collectionView: UICollectionView!
     
     struct Constants {
-        static let title: String = "Dashboard"
-        static let sectionIndexSummry: Int     = 0
+        static let pretitle: String            = "The Climbing App"
+        static let title: String               = "Dashboard"
+        static let numberOfSections: Int       = 3
+        static let sectionIndexLocations: Int  = 0
         static let sectionIndexSessions: Int   = 1
         static let sectionIndexStatistics: Int = 2
-        static let summaryCellHeight: CGFloat  = 160
+        static let locationCellHeight: CGFloat = 170
+        static let locationCellWidth: CGFloat  = 250
         static let sessionCellWidth: CGFloat   = 115
         static let sessionCellHeight: CGFloat  = 160
         static let chartCellHeight: CGFloat    = 230
-        static let numberOfSections: Int       = 3
     }
     
     // MARK: Lifecycle
@@ -42,8 +44,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     private func configureHeaderView() {
         headerView = LargeHeaderView()
-        headerView.pretitle = "The Climbing App"
-        headerView.title = "Dashboard"
+        headerView.pretitle = Constants.pretitle
+        headerView.title = Constants.title
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
@@ -62,8 +64,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         )
         
         collectionView.register(
-            SummaryCell.self,
-            forCellWithReuseIdentifier: SummaryCell.reuseIdentifier
+            LocationCell.self,
+            forCellWithReuseIdentifier: LocationCell.reuseIdentifier
         )
         
         collectionView.register(
@@ -130,8 +132,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             let section: NSCollectionLayoutSection!
             
             switch sectionIndex {
-            case Constants.sectionIndexSummry:
-                section = self.createSummaryLayoutSection(for: layoutEnviroment)
+            case Constants.sectionIndexLocations:
+                section = self.createLocationsLayoutSection(for: layoutEnviroment)
             case Constants.sectionIndexSessions:
                 section = self.createSessionsLayoutSection(for: layoutEnviroment)
             case Constants.sectionIndexStatistics:
@@ -146,6 +148,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
                 leading: .screenEdgeSpacing,
                 bottom: .zero,
                 trailing: .screenEdgeSpacing)
+            
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
+            let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+            section.boundarySupplementaryItems = [headerItem]
+            
             return section
         }
         
@@ -160,11 +167,12 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     
-    private func createSummaryLayoutSection(for: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(Constants.summaryCellHeight))
+    private func createLocationsLayoutSection(for: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
+        let size = NSCollectionLayoutSize(widthDimension: .absolute(Constants.locationCellWidth), heightDimension: .absolute(Constants.locationCellHeight))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
         return section
     }
     
@@ -204,7 +212,7 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
-        case Constants.sectionIndexSummry: return 1
+        case Constants.sectionIndexLocations: return 5
         case Constants.sectionIndexSessions: return 1
         case Constants.sectionIndexStatistics: return 5
         default: fatalError()
@@ -213,8 +221,10 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
-        case Constants.sectionIndexSummry:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryCell.reuseIdentifier, for: indexPath) as! SummaryCell
+        case Constants.sectionIndexLocations:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocationCell.reuseIdentifier, for: indexPath) as! LocationCell
+            cell.enviroment = .indoors
+            cell.name = "Earth Treks (Rockville)"
             return cell
         case Constants.sectionIndexSessions:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.reuseIdentifier, for: indexPath) as! CardCell
@@ -243,8 +253,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
             sectionHeader.delegate = self
             
             switch indexPath.section {
-            case Constants.sectionIndexSummry:
-                sectionHeader.title = "Summary"
+            case Constants.sectionIndexLocations:
+                sectionHeader.title = "Locations"
             case Constants.sectionIndexSessions:
                 sectionHeader.title = "Sessions"
                 sectionHeader.buttonTitle = "See All"
@@ -268,12 +278,12 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     // MARK: SetupSessionViewControllerDelegate
-    func setupSessionViewController(_ SetupSessionViewController: SetupSessionViewController, didSetupSessionWithDiscipline discipline: Discipline, andLocation location: Location) {
+    func setupSessionViewController(_ SetupSessionViewController: SetupSessionViewController, didSetupSessionWithDiscipline discipline: Discipline) {
         
-        let session = SessionModel(discipline: discipline, location: location)
-        let sessionViewController = SessionViewController(session: session)
-        sessionViewController.modalPresentationStyle = .overFullScreen
-        present(sessionViewController, animated: true, completion: nil)
+//        let session = SessionModel(discipline: discipline, location: location)
+//        let sessionViewController = SessionViewController(session: session)
+//        sessionViewController.modalPresentationStyle = .overFullScreen
+//        present(sessionViewController, animated: true, completion: nil)
     
     }
     
