@@ -16,9 +16,12 @@
 		C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A4247337DC0066DAE1 /* TCATypes.swift */; };
 		C95531A724733FD40066DAE1 /* TCAEnumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A624733FD40066DAE1 /* TCAEnumerations.swift */; };
 		C95531AA247340A00066DAE1 /* TCAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A9247340A00066DAE1 /* TCAConstants.swift */; };
+		C95531AC2473539C0066DAE1 /* TCALocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AB2473539C0066DAE1 /* TCALocationController.swift */; };
+		C95531AE247354130066DAE1 /* TCASessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AD247354130066DAE1 /* TCASessionController.swift */; };
+		C95531B0247354290066DAE1 /* TCAClimbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AF247354290066DAE1 /* TCAClimbController.swift */; };
 		C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955FE572453F445005525E3 /* CompactHeaderView.swift */; };
 		C964DBC2247219A5004DB8B0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC1247219A5004DB8B0 /* LocationModel.swift */; };
-		C964DBC62472D470004DB8B0 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC52472D470004DB8B0 /* LocationCell.swift */; };
+		C964DBC62472D470004DB8B0 /* TCALocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC52472D470004DB8B0 /* TCALocationCell.swift */; };
 		C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */; };
 		C96B2FD0245B1AF3009CC0BD /* AttemptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */; };
 		C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2823D34C0D0041A767 /* AppDelegate.swift */; };
@@ -75,9 +78,12 @@
 		C95531A4247337DC0066DAE1 /* TCATypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATypes.swift; sourceTree = "<group>"; };
 		C95531A624733FD40066DAE1 /* TCAEnumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAEnumerations.swift; sourceTree = "<group>"; };
 		C95531A9247340A00066DAE1 /* TCAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAConstants.swift; sourceTree = "<group>"; };
+		C95531AB2473539C0066DAE1 /* TCALocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocationController.swift; sourceTree = "<group>"; };
+		C95531AD247354130066DAE1 /* TCASessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASessionController.swift; sourceTree = "<group>"; };
+		C95531AF247354290066DAE1 /* TCAClimbController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAClimbController.swift; sourceTree = "<group>"; };
 		C955FE572453F445005525E3 /* CompactHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactHeaderView.swift; sourceTree = "<group>"; };
 		C964DBC1247219A5004DB8B0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
-		C964DBC52472D470004DB8B0 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		C964DBC52472D470004DB8B0 /* TCALocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocationCell.swift; sourceTree = "<group>"; };
 		C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iconlabel.swift; sourceTree = "<group>"; };
 		C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptModel.swift; sourceTree = "<group>"; };
 		C974EE2523D34C0D0041A767 /* Climb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Climb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,7 +183,7 @@
 				C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */,
 				C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */,
 				C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */,
-				C964DBC52472D470004DB8B0 /* LocationCell.swift */,
+				C964DBC52472D470004DB8B0 /* TCALocationCell.swift */,
 			);
 			path = "Collection View Components";
 			sourceTree = "<group>";
@@ -188,6 +194,9 @@
 				C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */,
 				C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */,
 				C94F135F245600030066020B /* SessionViewController.swift */,
+				C95531AB2473539C0066DAE1 /* TCALocationController.swift */,
+				C95531AD247354130066DAE1 /* TCASessionController.swift */,
+				C95531AF247354290066DAE1 /* TCAClimbController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -436,13 +445,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95531B0247354290066DAE1 /* TCAClimbController.swift in Sources */,
 				C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */,
 				C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */,
 				C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */,
 				C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */,
 				C9C909282454BA82002E9372 /* BasicButton.swift in Sources */,
 				C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */,
-				C964DBC62472D470004DB8B0 /* LocationCell.swift in Sources */,
+				C964DBC62472D470004DB8B0 /* TCALocationCell.swift in Sources */,
 				C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */,
 				C95531A3247337C70066DAE1 /* TCAProtocols.swift in Sources */,
 				C95531A724733FD40066DAE1 /* TCAEnumerations.swift in Sources */,
@@ -453,6 +463,7 @@
 				C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */,
 				C98680DA24328B2900BBF5A6 /* UIView+Extension.swift in Sources */,
 				C94F1360245600030066020B /* SessionViewController.swift in Sources */,
+				C95531AE247354130066DAE1 /* TCASessionController.swift in Sources */,
 				C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */,
 				C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */,
 				C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */,
@@ -467,6 +478,7 @@
 				C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */,
 				C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */,
 				C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */,
+				C95531AC2473539C0066DAE1 /* TCALocationController.swift in Sources */,
 				C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */,
 				C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */,
 				C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */,

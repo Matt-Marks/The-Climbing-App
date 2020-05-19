@@ -62,6 +62,8 @@ class Iconlabel: UIView {
             stack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
+        textLabel.adjustsFontForContentSizeCategory = true
+        
         stack.addArrangedSubview(textLabel)
         stack.addArrangedSubview(iconImageView)
                 

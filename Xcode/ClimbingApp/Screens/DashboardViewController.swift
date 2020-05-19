@@ -64,8 +64,8 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
         )
         
         collectionView.register(
-            LocationCell.self,
-            forCellWithReuseIdentifier: LocationCell.reuseIdentifier
+            TCALocationCell.self,
+            forCellWithReuseIdentifier: TCALocationCell.reuseIdentifier
         )
         
         collectionView.register(
@@ -222,9 +222,11 @@ class DashboardViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case Constants.sectionIndexLocations:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LocationCell.reuseIdentifier, for: indexPath) as! LocationCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TCALocationCell.reuseIdentifier, for: indexPath) as! TCALocationCell
             cell.enviroment = .indoors
             cell.name = "Earth Treks (Rockville)"
+            cell.backgroundImage = UIImage(named: "generic.gym")
+            cell.numberOfClimbs = 147
             return cell
         case Constants.sectionIndexSessions:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.reuseIdentifier, for: indexPath) as! CardCell
