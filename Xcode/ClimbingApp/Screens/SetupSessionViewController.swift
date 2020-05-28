@@ -39,7 +39,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     private var selectedDiscipline: Discipline = Constants.initialSelectedDiscipline
     
     // The top nav bar.
-    private var headerView: CompactHeaderView!
+    private var headerView: TCANavigationBar!
     
     // The collection view holding location and discipline options.
     private var collectionView: UICollectionView!
@@ -84,7 +84,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     
     /// Creates and places a stationary header at the top of the view controller.
     private func configureHeaderView() {
-        headerView = CompactHeaderView()
+        headerView = TCANavigationBar()
         headerView.pretitle = Constants.pretitle
         headerView.title = Constants.title
         
@@ -103,13 +103,13 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
         collectionView = UICollectionView( frame: .zero, collectionViewLayout: createLayout() )
         
         // Used for location options.
-        collectionView.register(BasicButtonCell.self, forCellWithReuseIdentifier: BasicButtonCell.reuseIdentifier)
+        collectionView.register(TCABasicButtonCell.self, forCellWithReuseIdentifier: TCABasicButtonCell.reuseIdentifier)
         
         // Used for discipline options.
-        collectionView.register(DescriptiveButtonCell.self, forCellWithReuseIdentifier: DescriptiveButtonCell.reuseIdentifier)
+        collectionView.register(TCADescriptiveButtonCell.self, forCellWithReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier)
 
         // Used for section headers.
-        collectionView.register(SectionHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier)
+        collectionView.register(TCASectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TCASectionHeader.reuseIdentifier)
         
         // Used for start sessions button.
         collectionView.register(SetupSessionFooterReuseableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SetupSessionFooterReuseableView.reuseIdentifier)
@@ -166,79 +166,29 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
             
             switch sectionIndex {
             case Constants.sectionIndexDiscipline:
-                section = self.createDisciplineLayoutSection(for: layoutEnviroment)
+                section = .vertical(itemHeight: .estimated(100), bottomInset: .interSectionSpacing)
+                
+                // Footer with start button.
+                let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+                let footerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+                
+                section.boundarySupplementaryItems.append(footerItem)
+                
             default: fatalError()
             }
             
             return section
         }
         
+        
         // Add spacing between sections.
         let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = .interSectionSpacting
+        config.interSectionSpacing = .interSectionSpacing
         layout.configuration = config
         
         return layout
         
     }
-    
-    /// Creates the layout for the section of the collection view containing the discipline buttons.
-    ///
-    /// - Parameters:
-    ///     - layoutEnv: The NSCollectionLayoutEnvironment that the layout will be drawn in.
-    ///
-    /// - Returns:
-    ///     - The NSCollectionLayoutSection used for the discipline section.
-    private func createDisciplineLayoutSection(for layoutEnv: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        
-        // Section
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
-        let item = NSCollectionLayoutItem(layoutSize: size)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
-        let section = NSCollectionLayoutSection(group: group)
-        
-        // Header with 'Discipline' text.
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        // Footer with start button.
-        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
-        let footerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
-        
-        
-        section.boundarySupplementaryItems = [headerItem, footerItem]
-        section.interGroupSpacing = .interGroupSpacing
-        section.contentInsets = .init(top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .interSectionSpacting, trailing: .screenEdgeSpacing)
-        
-        return section
-    }
-    
-    /// Creates the layout for the section of the collection view containing the location buttons.
-    ///
-    /// - Parameters:
-    ///     - layoutEnv: The NSCollectionLayoutEnvironment that the layout will be drawn in.
-    ///
-    /// - Returns:
-    ///     - The NSCollectionLayoutSection used for the location section.
-//    private func createLocationLayoutSection(for layoutEnv: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-//
-//        // Section
-//        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(45))
-//        let item = NSCollectionLayoutItem(layoutSize: size)
-//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: Location.allCases.count)
-//        group.interItemSpacing = .fixed(.interItemSpacing)
-//        let section = NSCollectionLayoutSection(group: group)
-//
-//        // Heaer with 'Location' text.
-//        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
-//        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-//
-//        section.boundarySupplementaryItems = [headerItem]
-//        section.interGroupSpacing = .interGroupSpacing
-//        section.contentInsets = .init( top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .zero, trailing: .screenEdgeSpacing)
-//
-//        return section
-//    }
 
 
     // MARK: UICollectionViewDelegate & UICollectionViewDataSource
@@ -275,7 +225,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case Constants.sectionIndexDiscipline:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DescriptiveButtonCell.reuseIdentifier, for: indexPath) as! DescriptiveButtonCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier, for: indexPath) as! TCADescriptiveButtonCell
             
             let discipline = Discipline.allCases[indexPath.row]
             
@@ -285,7 +235,7 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
             
             return cell
         case Constants.sectionIndexLocation:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicButtonCell.reuseIdentifier, for: indexPath) as! BasicButtonCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TCABasicButtonCell.reuseIdentifier, for: indexPath) as! TCABasicButtonCell
 
             
             
@@ -300,8 +250,8 @@ class SetupSessionViewController: UIViewController, UICollectionViewDelegate, UI
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier,
-                for: indexPath) as! SectionHeaderReusableView
+                withReuseIdentifier: TCASectionHeader.reuseIdentifier,
+                for: indexPath) as! TCASectionHeader
             
             
             switch indexPath.section {
@@ -391,7 +341,7 @@ fileprivate class SetupSessionFooterReuseableView: UICollectionReusableView, Reu
     public var delegate: SetupSessionFooterReuseableViewDelegate?
     
     // MARK: Constants & Variables
-    private let startButton = BasicButton()
+    private let startButton = TCABasicButton()
     private let separator = UIView()
     
     // MARK: Initialization

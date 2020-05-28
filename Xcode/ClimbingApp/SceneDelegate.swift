@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -18,34 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        UserDefaults.standard.removeObject(forKey: "PinnedStats")
-        UserDefaults.standard.removeObject(forKey: "SavedSessions")
-        UserDefaults.standard.removeObject(forKey: "GradeSystems")
 
-        
-        let titleFont = UIFont.preferredFont(forTextStyle: .headline)
-        let largeTitleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
-        
-        let appearance = UINavigationBarAppearance()
-        
-        //appearance.backgroundColor = .systemBackground
-        
-        appearance.titleTextAttributes = [
-            .font: UIFont.roundedFont(ofSize: titleFont.pointSize, weight: .semibold)
-        ]
-        appearance.largeTitleTextAttributes = [
-            .font: UIFont.roundedFont(ofSize: largeTitleFont.pointSize, weight: .bold)
-        ]
-
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
-        //UINavigationBar.appearance().scrollEdgeAppearance = appearance
-
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = DashboardViewController()
+        window?.rootViewController = TCARootController()
         window?.makeKeyAndVisible()
+        
+        
+        
+
         
     }
 
@@ -79,7 +61,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
+    
 
 }
-

@@ -9,6 +9,25 @@
 import Foundation
 import UIKit
 
+// ********************************************************************** //
+// MARK: - VerticalEdge
+// ********************************************************************** //
+enum VerticalEdge: Int, CaseIterable {
+    case top
+    case bottom
+}
+
+// ********************************************************************** //
+// MARK: - HorizontalEdge
+// ********************************************************************** //
+enum HorizontalEdge: Int, CaseIterable {
+    case left
+    case right
+}
+
+// ********************************************************************** //
+// MARK: - Enviroment
+// ********************************************************************** //
 enum Enviroment: Int, CaseIterable {
     
     case indoors
@@ -30,7 +49,9 @@ enum Enviroment: Int, CaseIterable {
     
 }
 
-
+// ********************************************************************** //
+// MARK: - ClimbColor
+// ********************************************************************** //
 enum ClimbColor: Int, CaseIterable {
     
     case blue
@@ -42,10 +63,14 @@ enum ClimbColor: Int, CaseIterable {
     case red
     case teal
     case yellow
+    case black
+    case white
     
 }
 
-
+// ********************************************************************** //
+// MARK: - GradeSystem
+// ********************************************************************** //
 enum GradeSystem: Int, CaseIterable {
     
     // Problems
@@ -125,6 +150,9 @@ enum GradeSystem: Int, CaseIterable {
 }
 
 
+// ********************************************************************** //
+// MARK: - AttemptType
+// ********************************************************************** //
 enum AttemptType: Int, CaseIterable {
     
     case Attempt
@@ -184,6 +212,9 @@ enum AttemptType: Int, CaseIterable {
     }
 }
 
+// ********************************************************************** //
+// MARK: - Discipline
+// ********************************************************************** //
 enum Discipline: Int, CaseIterable {
     
     case bouldering

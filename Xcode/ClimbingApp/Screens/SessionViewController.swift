@@ -12,8 +12,8 @@ import UIKit
 class SessionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, SessionFooerReustableViewDelegate {
 
     // MARK: Constants & Variables
-    private var session: SessionModel
-    private var headerView = LargeHeaderView()
+    private var session: TCASession
+    private var headerView = TCANavigationBar()
     private var collectionView: UICollectionView!
     
     struct Constants {
@@ -26,7 +26,7 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     // MARK: Initialization
-    init(session: SessionModel) {
+    init(session: TCASession) {
         self.session = session
         super.init(nibName: nil, bundle: nil)
     }
@@ -47,7 +47,7 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     // MARK: Configuration
     private func configureHeaderView() {
-        headerView = LargeHeaderView()
+        headerView = TCANavigationBar()
         headerView.pretitle = "oasihdiuoash"
         headerView.title = "saoiuhduois"
         
@@ -62,15 +62,15 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     private func configureCollectionView() {
         
-        collectionView = UICollectionView( frame: .zero, collectionViewLayout: createLayout() )
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout() )
         
         // Used for cimbs.
-        collectionView.register(CardCell.self, forCellWithReuseIdentifier: CardCell.reuseIdentifier)
+        collectionView.register(TCACardCell.self, forCellWithReuseIdentifier: TCACardCell.reuseIdentifier)
         
         collectionView.register(AttemptCell.self, forCellWithReuseIdentifier: AttemptCell.reuseIdentifier)
         
         // Used for section headers.
-        collectionView.register(SectionHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier)
+        collectionView.register(TCASectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TCASectionHeader.reuseIdentifier)
         
         // Used for finish and cancel buttons.
         collectionView.register(SessionFooterReustableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SessionFooterReustableView.reuseIdentifier)
@@ -124,9 +124,15 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             switch sectionIndex {
             case Constants.sectionIndexClimbs:
-                section = self.createClimbsLayoutSection(for: layoutEnviroment)
+                section = .horizontal(itemWidth: .absolute(Constants.climbCellWidth), sectionHeight: .absolute(Constants.climbCellHeight))
             case Constants.sectionIndexSummary:
-                section = self.createSummaryLayoutSection(for: layoutEnviroment)
+                section = .vertical(itemHeight: .absolute(60))
+                
+                // Footer with finish and cancel buttons.
+                let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+                let footerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+                
+                section.boundarySupplementaryItems.append(footerItem)
             default: fatalError()
             }
             
@@ -135,49 +141,10 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // Add spacing between sections.
         let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = .interSectionSpacting
+        config.interSectionSpacing = .interSectionSpacing
         layout.configuration = config
         
         return layout
-    }
-    
-    private func createClimbsLayoutSection(for: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .absolute(Constants.climbCellWidth), heightDimension: .absolute(Constants.climbCellHeight))
-        let item = NSCollectionLayoutItem(layoutSize: size)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-        
-        // Heaer with 'Climbs' text.
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        section.boundarySupplementaryItems = [headerItem]
-        section.interGroupSpacing = .interGroupSpacing
-        section.contentInsets = .init( top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .zero, trailing: .screenEdgeSpacing)
-        
-        return section
-    }
-    
-    private func createSummaryLayoutSection(for: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60))
-        let item = NSCollectionLayoutItem(layoutSize: size)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
-        let section = NSCollectionLayoutSection(group: group)
-        
-        // Header with 'Summary' text.
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
-        
-        // Footer with finish and cancel buttons.
-        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
-        let footerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
-        
-        section.boundarySupplementaryItems = [headerItem, footerItem]
-        //section.interGroupSpacing = .interGroupSpacing
-        section.contentInsets = .init(top: .underSectionHeaderSpacing, leading: .screenEdgeSpacing, bottom: .interSectionSpacting, trailing: .screenEdgeSpacing)
-        
-        return section
     }
     
     // MARK: UICollectionViewDelegate & UICollectionViewDataSource
@@ -203,7 +170,7 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case Constants.sectionIndexClimbs:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.reuseIdentifier, for: indexPath) as! CardCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TCACardCell.reuseIdentifier, for: indexPath) as! TCACardCell
             
             cell.icon = UIImage(named: "bouldering.circle")
             cell.unselectedIconTintColor = .systemPurple
@@ -224,8 +191,8 @@ class SessionViewController: UIViewController, UICollectionViewDelegate, UIColle
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier,
-                for: indexPath) as! SectionHeaderReusableView
+                withReuseIdentifier: TCASectionHeader.reuseIdentifier,
+                for: indexPath) as! TCASectionHeader
             
             
             switch indexPath.section {
@@ -339,8 +306,8 @@ fileprivate class SessionFooterReustableView: UICollectionReusableView, ReuseIde
     public var delegate: SessionFooerReustableViewDelegate?
     
     // MARK: Constants & Variables
-    private let finishButton = BasicButton()
-    private let cancelButton = BasicButton()
+    private let finishButton = TCABasicButton()
+    private let cancelButton = TCABasicButton()
     private let separator = UIView()
     
     // MARK: Initialization

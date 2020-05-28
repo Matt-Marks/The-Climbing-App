@@ -65,14 +65,14 @@ class GradeSystemSelectorController: UIViewController, UICollectionViewDelegate,
         )
         
         collectionView.register(
-            DescriptiveButtonCell.self,
-            forCellWithReuseIdentifier: DescriptiveButtonCell.reuseIdentifier
+            TCADescriptiveButtonCell.self,
+            forCellWithReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier
         )
 
         collectionView.register(
-            SectionHeaderReusableView.self,
+            TCASectionHeader.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier
+            withReuseIdentifier: TCASectionHeader.reuseIdentifier
         )
         
         // We dont use multiple selection. But, since content touches are not
@@ -149,8 +149,8 @@ class GradeSystemSelectorController: UIViewController, UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: DescriptiveButtonCell.reuseIdentifier,
-            for: indexPath) as! DescriptiveButtonCell
+            withReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier,
+            for: indexPath) as! TCADescriptiveButtonCell
         
         
         var gradeSystem: GradeSystem {
@@ -174,8 +174,8 @@ class GradeSystemSelectorController: UIViewController, UICollectionViewDelegate,
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier,
-                for: indexPath) as! SectionHeaderReusableView
+                withReuseIdentifier: TCASectionHeader.reuseIdentifier,
+                for: indexPath) as! TCASectionHeader
             
             
             switch indexPath.section {

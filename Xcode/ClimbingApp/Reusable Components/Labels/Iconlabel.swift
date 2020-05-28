@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Iconlabel: UIView {
+class TCAIconLabel: UIView {
     
     public var text: String? {
         didSet {
@@ -40,6 +40,22 @@ class Iconlabel: UIView {
         }
     }
     
+    public var iconAlignment: HorizontalEdge = .left {
+        didSet {
+            switch iconAlignment {
+            case .left:
+                stack.semanticContentAttribute = .forceLeftToRight
+            case .right:
+                stack.semanticContentAttribute = .forceRightToLeft
+            }
+        }
+    }
+    
+    public var adjustsFontForContentSizeCategory: Bool = false {
+        didSet {
+            textLabel.adjustsFontForContentSizeCategory = adjustsFontForContentSizeCategory
+        }
+    }
     
     private let textLabel = UILabel()
     private let iconImageView = UIImageView()
@@ -47,10 +63,9 @@ class Iconlabel: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         stack.alignment = .center
         stack.axis = .horizontal
-        stack.spacing = 3
+        stack.spacing = 4
         stack.insetsLayoutMarginsFromSafeArea = false
         stack.isLayoutMarginsRelativeArrangement = true
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -61,9 +76,6 @@ class Iconlabel: UIView {
             stack.rightAnchor.constraint(equalTo: rightAnchor),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
-        textLabel.adjustsFontForContentSizeCategory = true
-        
         stack.addArrangedSubview(textLabel)
         stack.addArrangedSubview(iconImageView)
                 

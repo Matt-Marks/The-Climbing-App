@@ -57,8 +57,8 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
         )
         
         collectionView.register(
-            DescriptiveButtonCell.self,
-            forCellWithReuseIdentifier: DescriptiveButtonCell.reuseIdentifier
+            TCADescriptiveButtonCell.self,
+            forCellWithReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier
         )
         
         // We dont use multiple selection. But, since content touches are not
@@ -126,8 +126,8 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: DescriptiveButtonCell.reuseIdentifier,
-            for: indexPath) as! DescriptiveButtonCell
+            withReuseIdentifier: TCADescriptiveButtonCell.reuseIdentifier,
+            for: indexPath) as! TCADescriptiveButtonCell
         
         
         let climbType = AttemptType.allCases[indexPath.row]

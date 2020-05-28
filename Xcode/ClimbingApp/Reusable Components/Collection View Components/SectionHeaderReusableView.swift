@@ -19,13 +19,13 @@ import UIKit
 // MARK: - SectionHeaderReusableViewDelegate
 // ********************************************************************** //
 protocol SectionHeaderReusableViewDelegate {
-    func auxiliaryButtonPressed(in sectionHeader: SectionHeaderReusableView)
+    func auxiliaryButtonPressed(in sectionHeader: TCASectionHeader)
 }
 
 // ********************************************************************** //
-// MARK: - SectionHeaderReusableView
+// MARK: - TCASectionHeader
 // ********************************************************************** //
-class SectionHeaderReusableView: UICollectionReusableView, ReuseIdentifiable {
+class TCASectionHeader: UICollectionReusableView, ReuseIdentifiable {
         
     
     // MARK: Delegation
@@ -67,6 +67,13 @@ class SectionHeaderReusableView: UICollectionReusableView, ReuseIdentifiable {
         }
     }
     
+    /// The icon for the auxiliary button.
+    public var buttonIcon: UIImage? {
+        didSet {
+            buttonLabel.icon = buttonIcon
+        }
+    }
+    
     /// The main stack that contains everything.
     private let stack = UIStackView()
     
@@ -79,9 +86,9 @@ class SectionHeaderReusableView: UICollectionReusableView, ReuseIdentifiable {
     /// The separator at the top.
     private let separator = UIView()
     
-    /// The rigth hand size button. We use a label with a tap gesture recognizer
+    /// The right hand size button. We use a label with a tap gesture recognizer
     /// instead of a button becauset the
-    private let buttonLabel = UILabel()
+    private let buttonLabel = TCAIconLabel()
     
     
     // MARK: Initialization
@@ -110,6 +117,7 @@ class SectionHeaderReusableView: UICollectionReusableView, ReuseIdentifiable {
         // The title label is placed under the separator.
         titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.font = UIFont.roundedFont(forTextStyle: .title2).bold()
+        titleLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
     
         // We add a tap geature to the label to mimic a UIButton.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGeatureRecognized))
@@ -117,11 +125,15 @@ class SectionHeaderReusableView: UICollectionReusableView, ReuseIdentifiable {
         buttonLabel.textColor = .accent
         buttonLabel.addGestureRecognizer(tapGesture)
         buttonLabel.adjustsFontForContentSizeCategory = true
+        buttonLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         
         // The title and the right side button are placed in a horiznotal stack
-        // which is then placed inside of the main stack.
-        let titleButtonStack = UIStackView(arrangedSubviews: [titleLabel, buttonLabel])
+        // which is then placed inside of the main stack. An extra UIView is placed
+        // between the titleLabel and the buttonLabel to allow the title and the
+        // button to be aligned to the left and right respectivly.
+        let titleButtonStack = UIStackView(arrangedSubviews: [titleLabel, UIView(), buttonLabel])
         titleButtonStack.axis = .horizontal
+        titleButtonStack.distribution = .equalSpacing
         stack.addArrangedSubview(titleButtonStack)
         
         // Finally, the subtitle goes under everything.

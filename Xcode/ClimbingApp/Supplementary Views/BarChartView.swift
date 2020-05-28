@@ -121,10 +121,10 @@ class BarChartView: UIView {
     
     struct Constants {
         static let cellCornerRadius: CGFloat      = 3.0
-        static let cellColor: UIColor             = .white
+        static let cellColor: UIColor             = .accent
         static let axisLineThickness: CGFloat     = 0.5
-        static let axisLineColor: UIColor         = .white
-        static let axisLabelTextColor: UIColor    = .white
+        static let axisLineColor: UIColor         = .accent
+        static let axisLabelTextColor: UIColor    = .accent
         static let axisLabelFont: UIFont          = UIFont.roundedFont(forTextStyle: .caption1).bold()
     }
     

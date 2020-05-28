@@ -26,7 +26,7 @@ protocol GradeSelectorControllerDelegate {
 // MARK: - GradeSelectorController
 // ********************************************************************** //
 
-class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GradeSystemSelectorControllerDataSource, GradeSytemSelectorControllerDelegate, SectionHeaderReusableViewDelegate {
+class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GradeSystemSelectorControllerDataSource, GradeSytemSelectorControllerDelegate, TCASectionHeaderDelegate {
     
 
     
@@ -75,14 +75,14 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
         )
         
         collectionView.register(
-            BasicButtonCell.self,
-            forCellWithReuseIdentifier: BasicButtonCell.reuseIdentifier
+            TCABasicButtonCell.self,
+            forCellWithReuseIdentifier: TCABasicButtonCell.reuseIdentifier
         )
 
         collectionView.register(
-            SectionHeaderReusableView.self,
+            TCASectionHeader.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier
+            withReuseIdentifier: TCASectionHeader.reuseIdentifier
         )
         
         // We dont use multiple selection. But, since content touches are not
@@ -160,8 +160,8 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
         
         
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: BasicButtonCell.reuseIdentifier,
-            for: indexPath) as! BasicButtonCell
+            withReuseIdentifier: TCABasicButtonCell.reuseIdentifier,
+            for: indexPath) as! TCABasicButtonCell
         
         cell.basicButton.title = gradeSystem.values[indexPath.row]
         return cell
@@ -174,8 +174,8 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
-                withReuseIdentifier: SectionHeaderReusableView.reuseIdentifier,
-                for: indexPath) as! SectionHeaderReusableView
+                withReuseIdentifier: TCASectionHeader.reuseIdentifier,
+                for: indexPath) as! TCASectionHeader
             
             sectionHeader.buttonTitle = gradeSystem.name
             sectionHeader.delegate = self
@@ -235,7 +235,7 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     // MARK: SectionHeaderReusableViewDelegate {
-    func auxiliaryButtonPressed(in sectionHeader: SectionHeaderReusableView) {
+    func auxiliaryButtonPressed(in sectionHeader: TCASectionHeader) {
         let gradeSystemSelector = GradeSystemSelectorController()
         gradeSystemSelector.delegate = self
         gradeSystemSelector.dataSource = self

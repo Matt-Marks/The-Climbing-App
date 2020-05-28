@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C912B07E2475FCD70016F9F8 /* TCABannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C912B07D2475FCD70016F9F8 /* TCABannerCell.swift */; };
 		C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91331C723DB522400F47451 /* UIFont+Extension.swift */; };
 		C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9152ADB23D75359002B9D5D /* LineChartView.swift */; };
-		C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E7E94244F7AB20075578A /* LargeHeaderView.swift */; };
-		C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */; };
+		C915C839247C444A001AF030 /* TCASettingsThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C838247C444A001AF030 /* TCASettingsThemeController.swift */; };
+		C915C83D247C45D2001AF030 /* TCASettingsGeneralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C83C247C45D2001AF030 /* TCASettingsGeneralController.swift */; };
+		C915C83F247C563A001AF030 /* TCASettingsTipJarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C83E247C563A001AF030 /* TCASettingsTipJarController.swift */; };
+		C915C841247C5655001AF030 /* TCASettingsContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C840247C5655001AF030 /* TCASettingsContactController.swift */; };
+		C915C843247C566B001AF030 /* TCASettingsIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C842247C566B001AF030 /* TCASettingsIconController.swift */; };
+		C915C845247C567A001AF030 /* TCASettingsColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C915C844247C567A001AF030 /* TCASettingsColorController.swift */; };
+		C9339F4C247B28EE007A00F4 /* TCARootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9339F4B247B28EE007A00F4 /* TCARootController.swift */; };
+		C9339F4E247B2D24007A00F4 /* TCASessionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9339F4D247B2D24007A00F4 /* TCASessionsController.swift */; };
+		C9339F51247B2D3B007A00F4 /* TCALocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9339F50247B2D3B007A00F4 /* TCALocationsController.swift */; };
+		C9339F53247B2D4B007A00F4 /* TCAStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9339F52247B2D4B007A00F4 /* TCAStatisticsController.swift */; };
+		C9339F55247B2D58007A00F4 /* TCASettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9339F54247B2D58007A00F4 /* TCASettingsController.swift */; };
+		C94DBDD024717BF000F91F22 /* TCADescriptiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94DBDCF24717BF000F91F22 /* TCADescriptiveButton.swift */; };
 		C94F1360245600030066020B /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F135F245600030066020B /* SessionViewController.swift */; };
 		C95531A3247337C70066DAE1 /* TCAProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A2247337C70066DAE1 /* TCAProtocols.swift */; };
 		C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531A4247337DC0066DAE1 /* TCATypes.swift */; };
@@ -19,11 +30,11 @@
 		C95531AC2473539C0066DAE1 /* TCALocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AB2473539C0066DAE1 /* TCALocationController.swift */; };
 		C95531AE247354130066DAE1 /* TCASessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AD247354130066DAE1 /* TCASessionController.swift */; };
 		C95531B0247354290066DAE1 /* TCAClimbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95531AF247354290066DAE1 /* TCAClimbController.swift */; };
-		C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955FE572453F445005525E3 /* CompactHeaderView.swift */; };
-		C964DBC2247219A5004DB8B0 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC1247219A5004DB8B0 /* LocationModel.swift */; };
+		C955FE582453F445005525E3 /* TCANavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C955FE572453F445005525E3 /* TCANavigationBar.swift */; };
+		C964DBC2247219A5004DB8B0 /* TCALocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC1247219A5004DB8B0 /* TCALocation.swift */; };
 		C964DBC62472D470004DB8B0 /* TCALocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC52472D470004DB8B0 /* TCALocationCell.swift */; };
-		C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */; };
-		C96B2FD0245B1AF3009CC0BD /* AttemptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */; };
+		C964DBCA2472DCEB004DB8B0 /* TCAIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C964DBC92472DCEB004DB8B0 /* TCAIconLabel.swift */; };
+		C96B2FD0245B1AF3009CC0BD /* TCAAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B2FCF245B1AF3009CC0BD /* TCAAttempt.swift */; };
 		C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2823D34C0D0041A767 /* AppDelegate.swift */; };
 		C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */; };
 		C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C974EE3123D34C0D0041A767 /* ClimbingApp.xcdatamodeld */; };
@@ -31,24 +42,26 @@
 		C974EE3823D34C0E0041A767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C974EE3623D34C0E0041A767 /* LaunchScreen.storyboard */; };
 		C974EE4323D34C0E0041A767 /* ClimbingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE4223D34C0E0041A767 /* ClimbingAppTests.swift */; };
 		C974EE4E23D34C0E0041A767 /* ClimbingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974EE4D23D34C0E0041A767 /* ClimbingAppUITests.swift */; };
-		C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */; };
-		C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */; };
-		C97B7923243500A700DE3F40 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7922243500A700DE3F40 /* CardCell.swift */; };
+		C97B791F2434D6B400DE3F40 /* TCABasicButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B791E2434D6B400DE3F40 /* TCABasicButtonCell.swift */; };
+		C97B79212434D6C800DE3F40 /* TCADescriptiveButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B79202434D6C800DE3F40 /* TCADescriptiveButtonCell.swift */; };
+		C97B7923243500A700DE3F40 /* TCACardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B7922243500A700DE3F40 /* TCACardCell.swift */; };
 		C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */; };
 		C98680CA242EA23400BBF5A6 /* ClimbTypeSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */; };
 		C98680CC242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */; };
 		C98680DA24328B2900BBF5A6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98680D924328B2900BBF5A6 /* UIView+Extension.swift */; };
 		C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */; };
-		C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9944BC92421AF8E004EAEFE /* UserData.swift */; };
-		C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C1F244CA71100FDEA7D /* ChartCell.swift */; };
-		C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */; };
-		C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */; };
-		C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9062459B01F00A9795F /* SessionModel.swift */; };
-		C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9082459B11400A9795F /* ClimbModel.swift */; };
+		C9944BCA2421AF8E004EAEFE /* TCAUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9944BC92421AF8E004EAEFE /* TCAUserData.swift */; };
+		C9953DE0247D96E7006528D5 /* NSNotification+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9953DDF247D96E7006528D5 /* NSNotification+extension.swift */; };
+		C9B20C20244CA71100FDEA7D /* TCAChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B20C1F244CA71100FDEA7D /* TCAChartCell.swift */; };
+		C9C1409D244CC0E1009A7052 /* TCASectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1409C244CC0E1009A7052 /* TCASectionHeader.swift */; };
+		C9C4C9072459B01F00A9795F /* TCASession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9062459B01F00A9795F /* TCASession.swift */; };
+		C9C4C9092459B11400A9795F /* TCAClimb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4C9082459B11400A9795F /* TCAClimb.swift */; };
+		C9C4EF01247C716A00197E1A /* UITableViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C4EF00247C716A00197E1A /* UITableViewController+Extension.swift */; };
+		C9C682D92474405800D5DD0E /* NSCollectionLayoutSection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C682D82474405800D5DD0E /* NSCollectionLayoutSection+Extension.swift */; };
 		C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7C9D523D36AF3004954D4 /* BarChartView.swift */; };
-		C9C909282454BA82002E9372 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C909272454BA82002E9372 /* BasicButton.swift */; };
+		C9C909282454BA82002E9372 /* TCABasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C909272454BA82002E9372 /* TCABasicButton.swift */; };
 		C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB81CD242810D7003447AB /* StopwatchLabel.swift */; };
-		C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */; };
+		C9F55C60243E671E00C6D040 /* TCADashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F55C5F243E671E00C6D040 /* TCADashboardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +82,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C912B07D2475FCD70016F9F8 /* TCABannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCABannerCell.swift; sourceTree = "<group>"; };
 		C91331C723DB522400F47451 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		C9152ADB23D75359002B9D5D /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
-		C91E7E94244F7AB20075578A /* LargeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeHeaderView.swift; sourceTree = "<group>"; };
-		C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveButton.swift; sourceTree = "<group>"; };
+		C915C838247C444A001AF030 /* TCASettingsThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsThemeController.swift; sourceTree = "<group>"; };
+		C915C83C247C45D2001AF030 /* TCASettingsGeneralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsGeneralController.swift; sourceTree = "<group>"; };
+		C915C83E247C563A001AF030 /* TCASettingsTipJarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsTipJarController.swift; sourceTree = "<group>"; };
+		C915C840247C5655001AF030 /* TCASettingsContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsContactController.swift; sourceTree = "<group>"; };
+		C915C842247C566B001AF030 /* TCASettingsIconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsIconController.swift; sourceTree = "<group>"; };
+		C915C844247C567A001AF030 /* TCASettingsColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsColorController.swift; sourceTree = "<group>"; };
+		C9339F4B247B28EE007A00F4 /* TCARootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCARootController.swift; sourceTree = "<group>"; };
+		C9339F4D247B2D24007A00F4 /* TCASessionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASessionsController.swift; sourceTree = "<group>"; };
+		C9339F50247B2D3B007A00F4 /* TCALocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocationsController.swift; sourceTree = "<group>"; };
+		C9339F52247B2D4B007A00F4 /* TCAStatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAStatisticsController.swift; sourceTree = "<group>"; };
+		C9339F54247B2D58007A00F4 /* TCASettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASettingsController.swift; sourceTree = "<group>"; };
+		C94DBDCF24717BF000F91F22 /* TCADescriptiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCADescriptiveButton.swift; sourceTree = "<group>"; };
 		C94F135F245600030066020B /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		C95531A2247337C70066DAE1 /* TCAProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAProtocols.swift; sourceTree = "<group>"; };
 		C95531A4247337DC0066DAE1 /* TCATypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATypes.swift; sourceTree = "<group>"; };
@@ -81,11 +105,11 @@
 		C95531AB2473539C0066DAE1 /* TCALocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocationController.swift; sourceTree = "<group>"; };
 		C95531AD247354130066DAE1 /* TCASessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASessionController.swift; sourceTree = "<group>"; };
 		C95531AF247354290066DAE1 /* TCAClimbController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAClimbController.swift; sourceTree = "<group>"; };
-		C955FE572453F445005525E3 /* CompactHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactHeaderView.swift; sourceTree = "<group>"; };
-		C964DBC1247219A5004DB8B0 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		C955FE572453F445005525E3 /* TCANavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCANavigationBar.swift; sourceTree = "<group>"; };
+		C964DBC1247219A5004DB8B0 /* TCALocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocation.swift; sourceTree = "<group>"; };
 		C964DBC52472D470004DB8B0 /* TCALocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCALocationCell.swift; sourceTree = "<group>"; };
-		C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iconlabel.swift; sourceTree = "<group>"; };
-		C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttemptModel.swift; sourceTree = "<group>"; };
+		C964DBC92472DCEB004DB8B0 /* TCAIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAIconLabel.swift; sourceTree = "<group>"; };
+		C96B2FCF245B1AF3009CC0BD /* TCAAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAAttempt.swift; sourceTree = "<group>"; };
 		C974EE2523D34C0D0041A767 /* Climb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Climb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C974EE2823D34C0D0041A767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C974EE2A23D34C0D0041A767 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,24 +123,26 @@
 		C974EE4923D34C0E0041A767 /* ClimbingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClimbingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C974EE4D23D34C0E0041A767 /* ClimbingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbingAppUITests.swift; sourceTree = "<group>"; };
 		C974EE4F23D34C0E0041A767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonCell.swift; sourceTree = "<group>"; };
-		C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveButtonCell.swift; sourceTree = "<group>"; };
-		C97B7922243500A700DE3F40 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		C97B791E2434D6B400DE3F40 /* TCABasicButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCABasicButtonCell.swift; sourceTree = "<group>"; };
+		C97B79202434D6C800DE3F40 /* TCADescriptiveButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCADescriptiveButtonCell.swift; sourceTree = "<group>"; };
+		C97B7922243500A700DE3F40 /* TCACardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACardCell.swift; sourceTree = "<group>"; };
 		C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectorController.swift; sourceTree = "<group>"; };
 		C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbTypeSelectorController.swift; sourceTree = "<group>"; };
 		C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSystemSelectorController.swift; sourceTree = "<group>"; };
 		C98680D924328B2900BBF5A6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupSessionViewController.swift; sourceTree = "<group>"; };
-		C9944BC92421AF8E004EAEFE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		C9B20C1F244CA71100FDEA7D /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
-		C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
-		C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
-		C9C4C9062459B01F00A9795F /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
-		C9C4C9082459B11400A9795F /* ClimbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbModel.swift; sourceTree = "<group>"; };
+		C9944BC92421AF8E004EAEFE /* TCAUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAUserData.swift; sourceTree = "<group>"; };
+		C9953DDF247D96E7006528D5 /* NSNotification+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+extension.swift"; sourceTree = "<group>"; };
+		C9B20C1F244CA71100FDEA7D /* TCAChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAChartCell.swift; sourceTree = "<group>"; };
+		C9C1409C244CC0E1009A7052 /* TCASectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASectionHeader.swift; sourceTree = "<group>"; };
+		C9C4C9062459B01F00A9795F /* TCASession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCASession.swift; sourceTree = "<group>"; };
+		C9C4C9082459B11400A9795F /* TCAClimb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAClimb.swift; sourceTree = "<group>"; };
+		C9C4EF00247C716A00197E1A /* UITableViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Extension.swift"; sourceTree = "<group>"; };
+		C9C682D82474405800D5DD0E /* NSCollectionLayoutSection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+Extension.swift"; sourceTree = "<group>"; };
 		C9C7C9D523D36AF3004954D4 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
-		C9C909272454BA82002E9372 /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
+		C9C909272454BA82002E9372 /* TCABasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCABasicButton.swift; sourceTree = "<group>"; };
 		C9CB81CD242810D7003447AB /* StopwatchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchLabel.swift; sourceTree = "<group>"; };
-		C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		C9F55C5F243E671E00C6D040 /* TCADashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCADashboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +170,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C915C837247C4422001AF030 /* Settings Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C915C83C247C45D2001AF030 /* TCASettingsGeneralController.swift */,
+				C915C842247C566B001AF030 /* TCASettingsIconController.swift */,
+				C915C844247C567A001AF030 /* TCASettingsColorController.swift */,
+				C915C838247C444A001AF030 /* TCASettingsThemeController.swift */,
+				C915C840247C5655001AF030 /* TCASettingsContactController.swift */,
+				C915C83E247C563A001AF030 /* TCASettingsTipJarController.swift */,
+			);
+			path = "Settings Controllers";
+			sourceTree = "<group>";
+		};
+		C9339F4F247B2D28007A00F4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C9339F4B247B28EE007A00F4 /* TCARootController.swift */,
+				C9339F4D247B2D24007A00F4 /* TCASessionsController.swift */,
+				C9339F50247B2D3B007A00F4 /* TCALocationsController.swift */,
+				C9339F52247B2D4B007A00F4 /* TCAStatisticsController.swift */,
+				C9339F54247B2D58007A00F4 /* TCASettingsController.swift */,
+				C915C837247C4422001AF030 /* Settings Controllers */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		C94BC44824202E1C0046A6E8 /* Supplementary Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,9 +208,10 @@
 		C94DBDD2247188C600F91F22 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				C97207952475CB1E0035B1BB /* Navigation Bars */,
 				C996CD072471AB4500110DE9 /* Labels */,
-				C94DBDD4247188DF00F91F22 /* Collection View Components */,
 				C94DBDD3247188D400F91F22 /* Buttons */,
+				C94DBDD4247188DF00F91F22 /* Collection View Components */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -166,8 +219,8 @@
 		C94DBDD3247188D400F91F22 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				C9C909272454BA82002E9372 /* BasicButton.swift */,
-				C94DBDCF24717BF000F91F22 /* DescriptiveButton.swift */,
+				C9C909272454BA82002E9372 /* TCABasicButton.swift */,
+				C94DBDCF24717BF000F91F22 /* TCADescriptiveButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -175,15 +228,8 @@
 		C94DBDD4247188DF00F91F22 /* Collection View Components */ = {
 			isa = PBXGroup;
 			children = (
-				C91E7E94244F7AB20075578A /* LargeHeaderView.swift */,
-				C955FE572453F445005525E3 /* CompactHeaderView.swift */,
-				C9B20C21244CA7A900FDEA7D /* SummaryCell.swift */,
-				C97B7922243500A700DE3F40 /* CardCell.swift */,
-				C9B20C1F244CA71100FDEA7D /* ChartCell.swift */,
-				C97B791E2434D6B400DE3F40 /* BasicButtonCell.swift */,
-				C97B79202434D6C800DE3F40 /* DescriptiveButtonCell.swift */,
-				C9C1409C244CC0E1009A7052 /* SectionHeaderReusableView.swift */,
-				C964DBC52472D470004DB8B0 /* TCALocationCell.swift */,
+				C97207942475CB080035B1BB /* Boundry Items */,
+				C97207932475CAFF0035B1BB /* Cells */,
 			);
 			path = "Collection View Components";
 			sourceTree = "<group>";
@@ -191,12 +237,13 @@
 		C94DBDD5247188F800F91F22 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C9F55C5F243E671E00C6D040 /* DashboardViewController.swift */,
+				C9F55C5F243E671E00C6D040 /* TCADashboardController.swift */,
 				C990B9C3244DDCF9005FCCFD /* SetupSessionViewController.swift */,
 				C94F135F245600030066020B /* SessionViewController.swift */,
 				C95531AB2473539C0066DAE1 /* TCALocationController.swift */,
 				C95531AD247354130066DAE1 /* TCASessionController.swift */,
 				C95531AF247354290066DAE1 /* TCAClimbController.swift */,
+				C9339F4F247B2D28007A00F4 /* Tabs */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -205,7 +252,10 @@
 			isa = PBXGroup;
 			children = (
 				C91331C723DB522400F47451 /* UIFont+Extension.swift */,
+				C9C4EF00247C716A00197E1A /* UITableViewController+Extension.swift */,
+				C9C682D82474405800D5DD0E /* NSCollectionLayoutSection+Extension.swift */,
 				C98680D924328B2900BBF5A6 /* UIView+Extension.swift */,
+				C9953DDF247D96E7006528D5 /* NSNotification+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,11 +274,41 @@
 		C96A25DC2471A1FB003A5EB4 /* Not Used Yet */ = {
 			isa = PBXGroup;
 			children = (
+				C9CB81CD242810D7003447AB /* StopwatchLabel.swift */,
 				C98680CB242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift */,
 				C98680C7242E98BB00BBF5A6 /* GradeSelectorController.swift */,
 				C98680C9242EA23400BBF5A6 /* ClimbTypeSelectorController.swift */,
 			);
 			path = "Not Used Yet";
+			sourceTree = "<group>";
+		};
+		C97207932475CAFF0035B1BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C912B07D2475FCD70016F9F8 /* TCABannerCell.swift */,
+				C97B7922243500A700DE3F40 /* TCACardCell.swift */,
+				C9B20C1F244CA71100FDEA7D /* TCAChartCell.swift */,
+				C964DBC52472D470004DB8B0 /* TCALocationCell.swift */,
+				C97B791E2434D6B400DE3F40 /* TCABasicButtonCell.swift */,
+				C97B79202434D6C800DE3F40 /* TCADescriptiveButtonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C97207942475CB080035B1BB /* Boundry Items */ = {
+			isa = PBXGroup;
+			children = (
+				C9C1409C244CC0E1009A7052 /* TCASectionHeader.swift */,
+			);
+			path = "Boundry Items";
+			sourceTree = "<group>";
+		};
+		C97207952475CB1E0035B1BB /* Navigation Bars */ = {
+			isa = PBXGroup;
+			children = (
+				C955FE572453F445005525E3 /* TCANavigationBar.swift */,
+			);
+			path = "Navigation Bars";
 			sourceTree = "<group>";
 		};
 		C974EE1C23D34C0D0041A767 = {
@@ -292,8 +372,7 @@
 		C996CD072471AB4500110DE9 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
-				C9CB81CD242810D7003447AB /* StopwatchLabel.swift */,
-				C964DBC92472DCEB004DB8B0 /* Iconlabel.swift */,
+				C964DBC92472DCEB004DB8B0 /* TCAIconLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -301,11 +380,11 @@
 		C9C4C9052459B00B00A9795F /* Data & Models */ = {
 			isa = PBXGroup;
 			children = (
-				C9944BC92421AF8E004EAEFE /* UserData.swift */,
-				C9C4C9062459B01F00A9795F /* SessionModel.swift */,
-				C9C4C9082459B11400A9795F /* ClimbModel.swift */,
-				C964DBC1247219A5004DB8B0 /* LocationModel.swift */,
-				C96B2FCF245B1AF3009CC0BD /* AttemptModel.swift */,
+				C9944BC92421AF8E004EAEFE /* TCAUserData.swift */,
+				C9C4C9062459B01F00A9795F /* TCASession.swift */,
+				C9C4C9082459B11400A9795F /* TCAClimb.swift */,
+				C964DBC1247219A5004DB8B0 /* TCALocation.swift */,
+				C96B2FCF245B1AF3009CC0BD /* TCAAttempt.swift */,
 			);
 			path = "Data & Models";
 			sourceTree = "<group>";
@@ -445,44 +524,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9953DE0247D96E7006528D5 /* NSNotification+extension.swift in Sources */,
+				C915C843247C566B001AF030 /* TCASettingsIconController.swift in Sources */,
 				C95531B0247354290066DAE1 /* TCAClimbController.swift in Sources */,
-				C9944BCA2421AF8E004EAEFE /* UserData.swift in Sources */,
+				C9339F4E247B2D24007A00F4 /* TCASessionsController.swift in Sources */,
+				C9944BCA2421AF8E004EAEFE /* TCAUserData.swift in Sources */,
 				C974EE2923D34C0D0041A767 /* AppDelegate.swift in Sources */,
-				C94DBDD024717BF000F91F22 /* DescriptiveButton.swift in Sources */,
+				C94DBDD024717BF000F91F22 /* TCADescriptiveButton.swift in Sources */,
 				C95531A5247337DC0066DAE1 /* TCATypes.swift in Sources */,
-				C9C909282454BA82002E9372 /* BasicButton.swift in Sources */,
-				C9C4C9072459B01F00A9795F /* SessionModel.swift in Sources */,
+				C9C909282454BA82002E9372 /* TCABasicButton.swift in Sources */,
+				C9C4C9072459B01F00A9795F /* TCASession.swift in Sources */,
 				C964DBC62472D470004DB8B0 /* TCALocationCell.swift in Sources */,
-				C9F55C60243E671E00C6D040 /* DashboardViewController.swift in Sources */,
+				C9F55C60243E671E00C6D040 /* TCADashboardController.swift in Sources */,
+				C9C4EF01247C716A00197E1A /* UITableViewController+Extension.swift in Sources */,
 				C95531A3247337C70066DAE1 /* TCAProtocols.swift in Sources */,
 				C95531A724733FD40066DAE1 /* TCAEnumerations.swift in Sources */,
 				C98680CC242FC6EC00BBF5A6 /* GradeSystemSelectorController.swift in Sources */,
-				C964DBC2247219A5004DB8B0 /* LocationModel.swift in Sources */,
+				C9C682D92474405800D5DD0E /* NSCollectionLayoutSection+Extension.swift in Sources */,
+				C964DBC2247219A5004DB8B0 /* TCALocation.swift in Sources */,
 				C974EE3323D34C0D0041A767 /* ClimbingApp.xcdatamodeld in Sources */,
-				C9C4C9092459B11400A9795F /* ClimbModel.swift in Sources */,
+				C9C4C9092459B11400A9795F /* TCAClimb.swift in Sources */,
 				C990B9C4244DDCF9005FCCFD /* SetupSessionViewController.swift in Sources */,
 				C98680DA24328B2900BBF5A6 /* UIView+Extension.swift in Sources */,
+				C915C83D247C45D2001AF030 /* TCASettingsGeneralController.swift in Sources */,
 				C94F1360245600030066020B /* SessionViewController.swift in Sources */,
 				C95531AE247354130066DAE1 /* TCASessionController.swift in Sources */,
 				C974EE2B23D34C0D0041A767 /* SceneDelegate.swift in Sources */,
 				C91331C823DB522400F47451 /* UIFont+Extension.swift in Sources */,
 				C98680C8242E98BB00BBF5A6 /* GradeSelectorController.swift in Sources */,
-				C97B7923243500A700DE3F40 /* CardCell.swift in Sources */,
+				C97B7923243500A700DE3F40 /* TCACardCell.swift in Sources */,
 				C95531AA247340A00066DAE1 /* TCAConstants.swift in Sources */,
-				C9B20C20244CA71100FDEA7D /* ChartCell.swift in Sources */,
-				C96B2FD0245B1AF3009CC0BD /* AttemptModel.swift in Sources */,
-				C91E7E95244F7AB20075578A /* LargeHeaderView.swift in Sources */,
+				C915C839247C444A001AF030 /* TCASettingsThemeController.swift in Sources */,
+				C9B20C20244CA71100FDEA7D /* TCAChartCell.swift in Sources */,
+				C96B2FD0245B1AF3009CC0BD /* TCAAttempt.swift in Sources */,
 				C98680CA242EA23400BBF5A6 /* ClimbTypeSelectorController.swift in Sources */,
+				C9339F53247B2D4B007A00F4 /* TCAStatisticsController.swift in Sources */,
 				C9CB81CE242810D7003447AB /* StopwatchLabel.swift in Sources */,
 				C9C7C9D623D36AF3004954D4 /* BarChartView.swift in Sources */,
-				C97B79212434D6C800DE3F40 /* DescriptiveButtonCell.swift in Sources */,
+				C915C845247C567A001AF030 /* TCASettingsColorController.swift in Sources */,
+				C97B79212434D6C800DE3F40 /* TCADescriptiveButtonCell.swift in Sources */,
+				C9339F4C247B28EE007A00F4 /* TCARootController.swift in Sources */,
 				C9152ADC23D75359002B9D5D /* LineChartView.swift in Sources */,
-				C9C1409D244CC0E1009A7052 /* SectionHeaderReusableView.swift in Sources */,
+				C9C1409D244CC0E1009A7052 /* TCASectionHeader.swift in Sources */,
 				C95531AC2473539C0066DAE1 /* TCALocationController.swift in Sources */,
-				C964DBCA2472DCEB004DB8B0 /* Iconlabel.swift in Sources */,
-				C97B791F2434D6B400DE3F40 /* BasicButtonCell.swift in Sources */,
-				C9B20C22244CA7A900FDEA7D /* SummaryCell.swift in Sources */,
-				C955FE582453F445005525E3 /* CompactHeaderView.swift in Sources */,
+				C912B07E2475FCD70016F9F8 /* TCABannerCell.swift in Sources */,
+				C964DBCA2472DCEB004DB8B0 /* TCAIconLabel.swift in Sources */,
+				C9339F51247B2D3B007A00F4 /* TCALocationsController.swift in Sources */,
+				C9339F55247B2D58007A00F4 /* TCASettingsController.swift in Sources */,
+				C915C83F247C563A001AF030 /* TCASettingsTipJarController.swift in Sources */,
+				C97B791F2434D6B400DE3F40 /* TCABasicButtonCell.swift in Sources */,
+				C915C841247C5655001AF030 /* TCASettingsContactController.swift in Sources */,
+				C955FE582453F445005525E3 /* TCANavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-
+// ********************************************************************** //
+// MARK: - UIColors
+// ********************************************************************** //
 extension UIColor {
     
     /// The accent color used throughout the application.
@@ -23,7 +25,9 @@ extension UIColor {
     
 }
 
-
+// ********************************************************************** //
+// MARK: - CGFloats
+// ********************************************************************** //
 extension CGFloat {
 
     // The corner radius of all collection view cells.
@@ -33,16 +37,16 @@ extension CGFloat {
     static let cellEdgeSpacing: CGFloat = 13.0
     
     // The spacing between the content of the app and the edge of the screen.
-    static let screenEdgeSpacing: CGFloat = 25.0
+    static let screenEdgeSpacing: CGFloat = 20.0
     
     // The spacing between collection view sections.
-    static let interSectionSpacting: CGFloat = 30.0
+    static let interSectionSpacing: CGFloat = 30.0
     
     // The spacing between collection view items.
-    static let interItemSpacing: CGFloat = 10.0
+    static let interItemSpacing: CGFloat = 15.0
     
     // The specing between collection view groups.
-    static let interGroupSpacing: CGFloat = 10.0
+    static let interGroupSpacing: CGFloat = 15.0
     
     // The spacing between the bottom of a collection view section header and the
     // section itself.
