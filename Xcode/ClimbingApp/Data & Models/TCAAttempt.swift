@@ -10,8 +10,6 @@ import UIKit
 
 class TCAAttempt: NSObject, NSCoding {
     
-    typealias AttemptID = Int
-
     // MARK: Constants & Variables
     private struct Key {
         static let attemptID  = "attemptID"
@@ -21,8 +19,11 @@ class TCAAttempt: NSObject, NSCoding {
     }
     
     private var attemptID: AttemptID
+    
     private var successful: Bool
+    
     private var climbID: ClimbID
+    
     private var date: Date
     
     // MARK: Initialization

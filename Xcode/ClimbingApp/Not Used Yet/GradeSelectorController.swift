@@ -75,8 +75,8 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
         )
         
         collectionView.register(
-            TCABasicButtonCell.self,
-            forCellWithReuseIdentifier: TCABasicButtonCell.reuseIdentifier
+            TCAButtonCell.self,
+            forCellWithReuseIdentifier: TCAButtonCell.reuseIdentifier
         )
 
         collectionView.register(
@@ -160,10 +160,10 @@ class GradeSelectorController: UIViewController, UICollectionViewDelegate, UICol
         
         
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: TCABasicButtonCell.reuseIdentifier,
-            for: indexPath) as! TCABasicButtonCell
+            withReuseIdentifier: TCAButtonCell.reuseIdentifier,
+            for: indexPath) as! TCAButtonCell
         
-        cell.basicButton.title = gradeSystem.values[indexPath.row]
+        cell.title = gradeSystem.values[indexPath.row]
         return cell
         
         

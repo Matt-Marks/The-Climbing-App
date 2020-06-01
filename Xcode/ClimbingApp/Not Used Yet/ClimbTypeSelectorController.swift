@@ -131,10 +131,10 @@ class ClimbTypeSelectorController: UIViewController, UICollectionViewDelegate, U
         
         
         let climbType = AttemptType.allCases[indexPath.row]
-        cell.descriptiveButton.icon = climbType.icon
+        cell.descriptiveButton.image = climbType.icon
         cell.descriptiveButton.title = climbType.name
         cell.descriptiveButton.subtitle = climbType.description
-        cell.descriptiveButton.unselectedIconTintColor = climbType.color
+        //cell.descriptiveButton.unselectedIconTintColor = climbType.color
 
         return cell
     }

@@ -46,12 +46,11 @@ class TCASession: NSObject, NSCoding {
         guard let discipline = Discipline(rawValue: coder.decodeInteger(forKey: Key.discipline)) else { fatalError() }
         guard let date       = coder.decodeObject(forKey: Key.date) as? Date else { fatalError() }
         guard let attemptIDs = coder.decodeObject(forKey: Key.attemptIDs) as? [AttemptID] else { fatalError() }
-        guard let locationID = coder.decodeObject(forKey: Key.locationID) as? LocationID else { fatalError() }
         
         self.discipline = discipline
         self.date       = date
         self.attemptIDs = attemptIDs
-        self.locationID = locationID
+        self.locationID = coder.decodeInteger(forKey: Key.locationID)
         
         super.init()
         

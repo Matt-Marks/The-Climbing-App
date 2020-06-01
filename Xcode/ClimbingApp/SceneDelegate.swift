@@ -25,10 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = TCARootController()
         window?.makeKeyAndVisible()
         
-        
-        
-
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

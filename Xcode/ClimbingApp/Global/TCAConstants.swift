@@ -21,7 +21,10 @@ extension UIColor {
     static let secondaryAccent: UIColor = .systemTeal
     
     /// The background color many UICollectionViewCell's throughout the application.
-    static let cellBackgound: UIColor = .quaternarySystemFill
+    static let cellBackgound: UIColor = .secondarySystemGroupedBackground
+    
+    /// The color used for separators and borders.
+    static let divider: UIColor = .secondarySystemFill
     
 }
 
@@ -31,10 +34,10 @@ extension UIColor {
 extension CGFloat {
 
     // The corner radius of all collection view cells.
-    static let cellCornerRadius: CGFloat = 13
+    static let cellCornerRadius: CGFloat = 7
     
     // The specing content and edge of every collection view cell.
-    static let cellEdgeSpacing: CGFloat = 13.0
+    static let cellEdgeSpacing: CGFloat = 15.0
     
     // The spacing between the content of the app and the edge of the screen.
     static let screenEdgeSpacing: CGFloat = 20.0
@@ -52,8 +55,8 @@ extension CGFloat {
     // section itself.
     static let underSectionHeaderSpacing: CGFloat = 10.0
     
-    // The height of all seperator bars used in the app.
-    static let separatorHeight: CGFloat = 0.5
+    // The height of dividers used in the app.
+    static let dividerHeight: CGFloat = 0.5
     
     // The spacing above and below the text in the large and compact heade views.
     static let navigationBarSpacing: CGFloat = 18.0

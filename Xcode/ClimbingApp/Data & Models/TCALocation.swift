@@ -6,9 +6,7 @@
 //  Copyright © 2020 Matt Marks. All rights reserved.
 //
 
-import Contacts
 import UIKit
-import MapKit
 
 class TCALocation: NSObject, NSCoding {
     
@@ -22,20 +20,23 @@ class TCALocation: NSObject, NSCoding {
         static let coordinates = "coordinates"
     }
     
+    
+    private var name: String
+    private var address: TCAPostalAddress
+    private var coordinates: TCACoordinate
+    private var enviroment: Enviroment
     private var climbIDs: [ClimbID]
     private var locationID: LocationID
-    private var address: CNMutablePostalAddress
-    private var enviroment: Enviroment
-    private var name: String
-    private var coordinates: CLLocationCoordinate2D
     
     
-    init(address: CNMutablePostalAddress, enviroment: Enviroment, name: String, climbIDs: [ClimbID], locationID: LocationID, coordinates: CLLocationCoordinate2D) {
-        self.address = address
-        self.enviroment = enviroment
-        self.name = name
-        self.climbIDs = climbIDs
-        self.locationID = locationID
+    
+    init(address: TCAPostalAddress, enviroment: Enviroment, name: String, climbIDs: [ClimbID], locationID: LocationID, coordinates: TCACoordinate) {
+                
+        self.address     = address
+        self.enviroment  = enviroment
+        self.name        = name
+        self.climbIDs    = climbIDs
+        self.locationID  = locationID
         self.coordinates = coordinates
         super.init()
     }
@@ -51,18 +52,19 @@ class TCALocation: NSObject, NSCoding {
     
     required init?(coder: NSCoder) {
         
-        guard let address = coder.decodeObject(forKey: Key.address) as? CNMutablePostalAddress else { fatalError() }
-        guard let enviroment = Enviroment(rawValue: coder.decodeInteger(forKey: Key.enviroment)) else { fatalError() }
-        guard let name = coder.decodeObject(forKey: Key.address) as? String else { fatalError() }
-        guard let climbIDs = coder.decodeObject(forKey: Key.climbIDs) as? [ClimbID] else { fatalError() }
-        guard let locationID = coder.decodeObject(forKey: Key.locationID) as? LocationID else { fatalError() }
-        guard let coordinates = coder.decodeObject(forKey: Key.coordinates) as? CLLocationCoordinate2D else { fatalError() }
+        guard let address     = coder.decodeObject(forKey: Key.address) as? TCAPostalAddress else { fatalError() }
+        guard let enviroment  = Enviroment(rawValue: coder.decodeInteger(forKey: Key.enviroment)) else { fatalError() }
+        guard let name        = coder.decodeObject(forKey: Key.name) as? String else { fatalError() }
+        guard let climbIDs    = coder.decodeObject(forKey: Key.climbIDs) as? [ClimbID] else { fatalError() }
+        guard let coordinates = coder.decodeObject(forKey: Key.coordinates) as? TCACoordinate else { fatalError() }
         
-        self.address = address
-        self.enviroment = enviroment
-        self.name = name
-        self.climbIDs = climbIDs
-        self.locationID = locationID
+        
+
+        self.address     = address
+        self.enviroment  = enviroment
+        self.name        = name
+        self.climbIDs    = climbIDs
+        self.locationID  = coder.decodeInteger(forKey: Key.locationID)
         self.coordinates = coordinates
         
         super.init()

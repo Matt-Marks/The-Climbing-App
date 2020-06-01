@@ -20,85 +20,61 @@ struct TCAUserData {
     
     static var sessions: [SessionID : TCASession] {
         get {
-            if keyExists(Keys.sessions) {
-                guard let data = UserDefaults.standard.data(forKey: Keys.sessions) else {
-                    return [ : ]
-                }
-                guard let dict = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [SessionID : TCASession] else {
-                    return [ : ]
-                }
-                return dict
-            } else {
-                return [ : ]
-            }
+            return unarchiveData(forKey: Keys.sessions)
         }
         set {
-            guard let data = try? NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false) else {fatalError()}
-            UserDefaults.standard.set(data, forKey: Keys.sessions)
+            archiveData(newValue, forKey: Keys.sessions)
         }
     }
     
     static var locations: [LocationID : TCALocation] {
         get {
-            if keyExists(Keys.locations) {
-                guard let data = UserDefaults.standard.data(forKey: Keys.locations) else {
-                    return [ : ]
-                }
-                guard let dict = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [LocationID : TCALocation] else {
-                    return [ : ]
-                }
-                return dict
-            } else {
-                return [ : ]
-            }
+            return unarchiveData(forKey: Keys.locations)
         }
         set {
-            guard let data = try? NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false) else {fatalError()}
-            UserDefaults.standard.set(data, forKey: Keys.locations)
+            archiveData(newValue, forKey: Keys.locations)
         }
     }
     
     static var climbs: [ClimbID : TCAClimb] {
         get {
-            if keyExists(Keys.climbs) {
-                guard let data = UserDefaults.standard.data(forKey: Keys.climbs) else {
-                    return [ : ]
-                }
-                guard let dict = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [ClimbID : TCAClimb] else {
-                    return [ : ]
-                }
-                return dict
-            } else {
-                return [ : ]
-            }
+            return unarchiveData(forKey: Keys.climbs)
         }
         set {
-            guard let data = try? NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false) else {fatalError()}
-            UserDefaults.standard.set(data, forKey: Keys.climbs)
+            archiveData(newValue, forKey: Keys.climbs)
         }
     }
     
     static var attempts: [AttemptID : TCAAttempt] {
         get {
-            if keyExists(Keys.attempts) {
-                guard let data = UserDefaults.standard.data(forKey: Keys.attempts) else {
-                    return [ : ]
-                }
-                guard let dict = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [AttemptID : TCAAttempt] else {
-                    return [ : ]
-                }
-                return dict
-            } else {
-                return [ : ]
-            }
+            return unarchiveData(forKey: Keys.attempts)
         }
         set {
-            guard let data = try? NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false) else {fatalError()}
-            UserDefaults.standard.set(data, forKey: Keys.attempts)
+            archiveData(newValue, forKey: Keys.attempts)
         }
     }
     
     
+    
+    private static func archiveData<T>(_ data: T, forKey key: String) {
+        guard let archivedData = try? NSKeyedArchiver.archivedData(withRootObject: data, requiringSecureCoding: false) else {fatalError()}
+        UserDefaults.standard.set(archivedData, forKey: key)
+    }
+    
+    
+    private static func unarchiveData<T1, T2>(forKey key: String) -> [T1 : T2] {
+        if keyExists(key) {
+            guard let data = UserDefaults.standard.data(forKey: key) else {
+                return [ : ]
+            }
+            guard let dict = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [T1 : T2] else {
+                return [ : ]
+            }
+            return dict
+        } else {
+            return [ : ]
+        }
+    }
     
 
     

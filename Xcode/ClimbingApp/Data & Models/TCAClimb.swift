@@ -52,13 +52,12 @@ class TCAClimb: NSObject, NSCoding {
         guard let gradeSystem = GradeSystem(rawValue: coder.decodeInteger(forKey: Key.gradeSystem)) else { fatalError() }
         guard let color       = ClimbColor(rawValue: coder.decodeInteger(forKey: Key.color)) else { fatalError() }
         guard let name        = coder.decodeObject(forKey: Key.name) as? String else { fatalError() }
-        guard let climbID     = coder.decodeObject(forKey: Key.name) as? ClimbID else { fatalError() }
         
         self.grade       = coder.decodeInteger(forKey: Key.grade)
         self.gradeSystem = gradeSystem
         self.name        = name
         self.color       = color
-        self.climbID     = climbID
+        self.climbID     = coder.decodeInteger(forKey: Key.climbID)
         
         super.init()
     }
